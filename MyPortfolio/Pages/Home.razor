@@ -1,0 +1,26 @@
+﻿@page "/"
+@using MyPortfolio.Components.Windows;
+@using MyPortfolio.Components.Windows.Tab
+@using MyPortfolio.Pages.AboutMe;
+@using MyPortfolio.Pages.Projects;
+
+<Window Title="System Information">
+	<TabPage Text="About me">
+		<Tab1Content />
+	</TabPage>
+	<TabPage Text="Tech Skills">
+		<Tab2Content />
+	</TabPage>
+</Window>
+
+<Window Title="Projects">
+	<TabPage Text="Graphics">
+		<Graphics />
+	</TabPage>
+	<TabPage Text="WebApps">
+		<WebApps />
+	</TabPage>
+	<TabPage Text="Other">
+		<Other />
+	</TabPage>
+</Window>

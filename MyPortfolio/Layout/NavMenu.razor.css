@@ -1,0 +1,8 @@
+.navbar {
+    background: var(--color-primary, #B8B8B8);
+    height: 86px;
+    display: flex;
+    justify-content: left;
+    gap: 8px;
+    padding: 8px;
+}

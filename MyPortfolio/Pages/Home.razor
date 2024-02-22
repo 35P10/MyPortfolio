@@ -4,23 +4,23 @@
 @using MyPortfolio.Pages.AboutMe;
 @using MyPortfolio.Pages.Projects;
 
-<Window Title="System Information">
+<ExplorerWindow Title="Projects">
+	<ExplorerTab Text="Graphics">
+		<Graphics />
+	</ExplorerTab>
+	<ExplorerTab Text="WebApps">
+		<WebApps />
+	</ExplorerTab>
+	<ExplorerTab Text="Other">
+		<Other />
+	</ExplorerTab>
+</ExplorerWindow>
+
+<Window Title="System Information" Height="340px">
 	<TabPage Text="About me">
 		<Tab1Content />
 	</TabPage>
 	<TabPage Text="Tech Skills">
 		<Tab2Content />
-	</TabPage>
-</Window>
-
-<Window Title="Projects">
-	<TabPage Text="Graphics">
-		<Graphics />
-	</TabPage>
-	<TabPage Text="WebApps">
-		<WebApps />
-	</TabPage>
-	<TabPage Text="Other">
-		<Other />
 	</TabPage>
 </Window>

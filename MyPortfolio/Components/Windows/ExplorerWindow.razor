@@ -1,18 +1,17 @@
 ﻿@using MyPortfolio.Components.Windows.Tab
 
 <div class="window box-shadow">
-    <div class="window-header">
+	<div class="window-header">
 		<h3>@Title</h3>
 		<button type="button"
-				class="box-shadow"
-		>
+				class="box-shadow">
 			X
 		</button>
-    </div>
-		<CascadingValue Value="this">
-	<div class="window-content-section tab-window">
+	</div>
+	<CascadingValue Value="this">
+		<div class="window-content-section explorer-window">
 			<div class="tab-section">
-				@foreach (TabPage tabPage in Pages)
+				@foreach (ExplorerTab tabPage in Pages)
 				{
 					<button type="button"
 							class="box-shadow @GetButtonClass(tabPage)"
@@ -24,8 +23,8 @@
 			<div class="window-content" style="@GetHeight()">
 				@ChildContent
 			</div>
-	</div>
-		</CascadingValue>
+		</div>
+	</CascadingValue>
 </div>
 
 @code {
@@ -39,10 +38,10 @@
 	public String Title { get; set; }
 
 
-	public TabPage ActivePage { get; set; }
-	List<TabPage> Pages = new List<TabPage>();
+	public ExplorerTab ActivePage { get; set; }
+	List<ExplorerTab> Pages = new List<ExplorerTab>();
 
-	internal void AddPage(TabPage tabPage)
+	internal void AddPage(ExplorerTab tabPage)
 	{
 		Pages.Add(tabPage);
 		if (Pages.Count == 1)
@@ -55,12 +54,12 @@
 		return "height :" + Height;
 	}
 
-	string GetButtonClass(TabPage page)
+	string GetButtonClass(ExplorerTab page)
 	{
 		return page == ActivePage ? "button-selected" : "button-unselected";
 	}
 
-	void ActivatePage(TabPage page)
+	void ActivatePage(ExplorerTab page)
 	{
 		ActivePage = page;
 	}

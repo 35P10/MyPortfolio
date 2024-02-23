@@ -125,12 +125,24 @@ code {
 
 /* Window style */
 
-.box-shadow, button {
+.box-shadow {
     color: black;
     display: block;
     padding: 3px;
     background-color: #BDBEBD;
     box-shadow: 0px -1px 0px 0px #000 inset, -1px 0px 0px 0px #000 inset, 1px 1px 0px 0px #DEDFDE inset, 0px -2px 0px 0px #7B7D7B inset, -2px 0px 0px 0px #7B7D7B inset, 2px 2px 0px 0px #FFF inset, 0px 0px 0px 3px #BDBEBD inset;
+}
+
+.explorer-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0 4px;
+}
+
+.explorer-option-selected {
+    background-color: #000179;
+    color: #FFF;
 }
 
 .window {
@@ -157,12 +169,11 @@ code {
     font-size: 12px;
     color: white;
     h3
-
-{
-    flex: 1;
-    font-weight: 400;
-    margin: 0;
-}
+    {
+        flex: 1;
+        font-weight: 400;
+        margin: 0;
+    }
 
     button {
         margin: 0;
@@ -179,3 +190,19 @@ code {
     display: flex;
     flex-direction: column;
 }
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 10px;
+
+    span {
+             flex: 1;
+         }
+}
+
+.input-box::before {
+    content: "Path:";
+}
+

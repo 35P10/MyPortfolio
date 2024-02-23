@@ -10,17 +10,37 @@
 	</div>
 	<CascadingValue Value="this">
 		<div class="window-content-section explorer-window">
-			<div class="tab-section">
-				@foreach (ExplorerTab tabPage in Pages)
-				{
-					<button type="button"
-							class="box-shadow @GetButtonClass(tabPage)"
-							@onclick=@( () => ActivatePage(tabPage) )>
-						@tabPage.Text
-					</button>
-				}
+			<div class="explorer-window-tabs box-shadow explorer-tab">
+				<div class="group-section box-shadow">
+					<div class="explorer-option">
+						📁35P10:\Projects
+					</div>
+					@foreach (var key in Projects.Keys)
+					{
+						<button class="explorer-option @GetButtonClass(key)" type="button"
+								@onclick=@( () => ActivateGroup(key) )>
+							@key
+						</button>
+					}
+				</div>
+				<hr />
+				<div class="tab-section box-shadow">
+						@if (Projects.Count > 0)
+						{
+							@foreach (ExplorerTab tabPage in Projects[ActiveGroup])
+							{
+								<button type="button"
+									class="explorer-option @GetButtonClass(tabPage)"
+										@onclick=@( () => ActivatePage(tabPage) )>
+									@tabPage.Title
+								</button>
+							}
+						}
+				</div>
 			</div>
-			<div class="window-content" style="@GetHeight()">
+			<div class="box-shadow explorer-tab" style="@GetHeight()">
+				<p class="input-box"><span class="box-shadow">@Path</span></p>
+
 				@ChildContent
 			</div>
 		</div>
@@ -38,14 +58,25 @@
 	public String Title { get; set; }
 
 
+	public String ActiveGroup { get; set; }
 	public ExplorerTab ActivePage { get; set; }
-	List<ExplorerTab> Pages = new List<ExplorerTab>();
+	Dictionary<string, List<ExplorerTab>> Projects = new Dictionary<string, List<ExplorerTab>>();
+	private String Path { get; set; } = "35P10:\\Projects\\";
 
 	internal void AddPage(ExplorerTab tabPage)
 	{
-		Pages.Add(tabPage);
-		if (Pages.Count == 1)
+		if (!Projects.ContainsKey(tabPage.Group))
+		{
+			Projects[tabPage.Group] = new List<ExplorerTab>();
+		}
+		Projects[tabPage.Group].Add(tabPage);
+
+		if (Projects.Count == 1)
+		{
+			ActiveGroup = tabPage.Group;
 			ActivePage = tabPage;
+			ActivatePage(tabPage);
+		}
 		StateHasChanged();
 	}
 
@@ -56,11 +87,22 @@
 
 	string GetButtonClass(ExplorerTab page)
 	{
-		return page == ActivePage ? "button-selected" : "button-unselected";
+		return page == ActivePage ? "explorer-option-selected" : "button-unselected";
+	}
+
+	string GetButtonClass(string group)
+	{
+		return group == ActiveGroup ? "explorer-option-selected" : "button-unselected";
 	}
 
 	void ActivatePage(ExplorerTab page)
 	{
 		ActivePage = page;
+		Path = "35P10:\\Projects\\" + @ActiveGroup + '\\' + @ActivePage.Title;
+	}
+
+	void ActivateGroup(String group)
+	{
+		ActiveGroup = group;
 	}
 }

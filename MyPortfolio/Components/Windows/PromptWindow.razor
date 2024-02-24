@@ -1,0 +1,20 @@
+﻿<div class="window box-shadow">
+	<div class="window-header">
+		<h3>@Title</h3>
+		<button type="button"
+				class="box-shadow">
+			X
+		</button>
+	</div>
+	<div class="window-content-section">
+		@ChildContent
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public String Title { get; set; }
+
+	[Parameter]
+	public RenderFragment ChildContent { get; set; }
+}

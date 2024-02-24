@@ -4,6 +4,28 @@
 @using MyPortfolio.Pages.AboutMe;
 @using MyPortfolio.Pages.Projects;
 
+<PromptWindow Title="Command Prompt">
+	mensaje de bienvenida: ¡gracias por visitar mi portfolio! <br />
+	------------------<br />
+	C:\Windows\User\35P10 > cat welcome.txt <br />
+	////////////////// <br />
+	Soy 35P10. <br />
+	Desarrollador FullStack <br />
+	y de Videojuegos <br />
+	////////////////// <br />
+	<br />
+	>
+</PromptWindow>
+
+<Window Title="System Information" Height="340px">
+	<TabPage Text="About me">
+		<Tab1Content />
+	</TabPage>
+	<TabPage Text="Tech Skills">
+		<Tab2Content />
+	</TabPage>
+</Window>
+
 <ExplorerWindow Title="Projects">
 	<ExplorerTab Group="Graphics" Title="My VideoGame">
 		<Graphics />
@@ -15,12 +37,3 @@
 		<Other />
 	</ExplorerTab>
 </ExplorerWindow>
-
-<Window Title="System Information" Height="340px">
-	<TabPage Text="About me">
-		<Tab1Content />
-	</TabPage>
-	<TabPage Text="Tech Skills">
-		<Tab2Content />
-	</TabPage>
-</Window>

@@ -32,3 +32,9 @@
 .explorer-tab {
     padding: 8px;
 }
+
+.explorer-window-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

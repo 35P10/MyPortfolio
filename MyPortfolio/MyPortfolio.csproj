@@ -12,6 +12,10 @@
     <None Remove="Components\Windows\PromptWindow.razor.css" />
     <None Remove="Components\Windows\Tab\ExplorerContent.razor.css" />
     <None Remove="Components\Windows\Window.razor.css" />
+    <None Remove="Pages\AboutMe\Formation.razor.css" />
+    <None Remove="Pages\AboutMe\Tab1Content.razor.css" />
+    <None Remove="Pages\AboutMe\Tab2Content - Copy.razor.css" />
+    <None Remove="Pages\AboutMe\Tab2Content.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +23,9 @@
     <Content Include="Components\Windows\PromptWindow.razor.css" />
     <Content Include="Components\Windows\Tab\ExplorerContent.razor.css" />
     <Content Include="Components\Windows\Window.razor.css" />
+    <Content Include="Pages\AboutMe\Formation.razor.css" />
+    <Content Include="Pages\AboutMe\Tab1Content.razor.css" />
+    <Content Include="Pages\AboutMe\Tab2Content.razor.css" />
   </ItemGroup>
 
   <ItemGroup>

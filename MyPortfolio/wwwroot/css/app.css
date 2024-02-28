@@ -1,9 +1,10 @@
 
 html, body {
-    font-family: "Pixelify Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
+    font-family: Consolas;
+    font-weight: 500;
     font-style: normal;
+    font-size: 12px;
+    line-height: normal;
 }
 
 * {
@@ -206,3 +207,7 @@ code {
     content: "Path:";
 }
 
+hr {
+    border-top: 1px solid #7B7D7B;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}

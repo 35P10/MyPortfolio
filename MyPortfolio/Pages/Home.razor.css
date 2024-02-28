@@ -1,0 +1,11 @@
+﻿.XD {
+    display: flex;
+    flex-direction:column;
+    gap: inherit;
+}
+
+@media (min-width: 1024px) {
+    .XD {
+        padding: 64px;
+    }
+}

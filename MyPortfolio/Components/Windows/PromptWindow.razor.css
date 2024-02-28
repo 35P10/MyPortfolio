@@ -8,3 +8,20 @@
 	font-weight: 400;
 	line-height: normal;
 }
+
+@media (min-width: 1024px) {
+	.window-header {
+		display: none;
+	}
+
+	.window {
+		padding: 48px 128px;
+		background-color: #000000;
+		border: none;
+		box-shadow: none;
+	}
+
+	.window-content-section{
+		font-size: 24px;
+	}
+}

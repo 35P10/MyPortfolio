@@ -3,4 +3,12 @@
 	height: 100%;
 	overflow-y: auto;
 	padding-left: 14px;
+	
+	h4 {
+		margin-bottom: 2px;
+	}
+
+	hr {
+		margin: 4px 0;
+	}
 }

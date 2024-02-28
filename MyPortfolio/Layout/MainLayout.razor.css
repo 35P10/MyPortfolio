@@ -13,7 +13,13 @@
 
 main {
     display: block;
-    height: calc(100vh - 86px);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 8px;
 }
 
 .sidebar {
@@ -78,8 +84,12 @@ main {
         width: 0;
     }
 
-    .top-row, article {
+    .top-row {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
+    }
+
+    article {
+        padding: 0 0;
     }
 }

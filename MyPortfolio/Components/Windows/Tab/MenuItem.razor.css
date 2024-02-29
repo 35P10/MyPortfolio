@@ -1,0 +1,19 @@
+﻿.menu-item {
+	display: flex;
+	align-items: center;
+	padding: 0 8px;
+	background-color: #BDBEBD;
+	width: 100%;
+	height: 24px;
+	font-size: 12px;
+	gap: 8px;
+	img {
+			height: 80%;
+	    }
+	p {
+		margin: 0;
+		padding: 0;
+		flex: 1;
+		align-self:center;
+	}
+}

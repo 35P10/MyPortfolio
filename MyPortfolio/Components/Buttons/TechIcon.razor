@@ -1,0 +1,17 @@
+﻿<img class="icon" src=@techIcons[Technology] alt=@Technology>
+
+@code {
+    [Parameter]
+    public string Technology { get; set; }
+
+    private Dictionary<string,string> techIcons = new Dictionary<string,string>();
+
+	protected override void OnInitialized()
+	{
+		techIcons["blazor"] = "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png";
+
+		if (techIcons[Technology] == null)
+			throw new ArgumentNullException("Tecnologia no reconocida");
+
+	}
+}

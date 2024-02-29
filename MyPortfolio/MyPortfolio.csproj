@@ -12,6 +12,7 @@
     <None Remove="Components\Windows\ExplorerWindow.razor.css" />
     <None Remove="Components\Windows\PromptWindow.razor.css" />
     <None Remove="Components\Windows\Tab\ExplorerContent.razor.css" />
+    <None Remove="Components\Windows\Tab\MenuItem.razor.css" />
     <None Remove="Components\Windows\Window.razor.css" />
     <None Remove="Pages\AboutMe\Formation.razor.css" />
     <None Remove="Pages\AboutMe\Tab1Content.razor.css" />
@@ -20,10 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Components\Windows\GroupWindow.razor.css" />
     <Content Include="Components\Windows\ExplorerWindow.razor.css" />
     <Content Include="Components\Windows\PromptWindow.razor.css" />
     <Content Include="Components\Windows\Tab\ExplorerContent.razor.css" />
+    <Content Include="Components\Windows\Tab\MenuItem.razor.css" />
     <Content Include="Components\Windows\Window.razor.css" />
     <Content Include="Pages\AboutMe\Formation.razor.css" />
     <Content Include="Pages\AboutMe\Tab1Content.razor.css" />
@@ -33,7 +34,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
-    <PackageReference Include="Syncfusion.Blazor.Core" Version="24.2.8" />
   </ItemGroup>
 
 </Project>

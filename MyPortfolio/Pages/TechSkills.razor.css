@@ -1,0 +1,22 @@
+﻿.tech-window-header {
+    background-color: #808080;
+        color: #C0C0C0;
+    padding: 8px 4px;
+    span
+        {
+        color: #FFFFFF;
+            font-weight: 700;
+        }
+    h3 {
+        font-size: 18px;
+    }
+}
+
+.tech-group {
+    .window-header {
+       padding: 2px 4px;
+    }
+    .window-header span {
+        margin-right: auto;
+    }
+}

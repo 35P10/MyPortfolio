@@ -1,0 +1,15 @@
+﻿.tech-group {
+    button {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .window-header
+    {
+        padding: 2px 4px;
+    }
+
+    .window-header span {
+        margin-right: auto;
+    }
+}

@@ -11,12 +11,3 @@
         font-size: 18px;
     }
 }
-
-.tech-group {
-    .window-header {
-       padding: 2px 4px;
-    }
-    .window-header span {
-        margin-right: auto;
-    }
-}

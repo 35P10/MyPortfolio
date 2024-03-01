@@ -1,4 +1,4 @@
-﻿@using MyPortfolio.Components.Windows.Tab
+﻿@using MyPortfolio.Components.Windows.Tab;
 
 <div class="window tech-window">
 	<div class="tech-window-header">
@@ -6,38 +6,46 @@
 	</div>
 
 	<div>
-		<div class="tech-group box-shadow">
-			<h4 class="window-header"><span>FrontEnd</span> ♪</h4>
-			<MenuItem techIcon="blazor" Title="Testo" />
+		<MenuTab Title="Lenguajes de Programación">
+			<MenuItem techIcon="CS" Title="C#" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
+			<MenuItem techIcon="CPP" Title="C++" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
-		</div>
-				<div class="tech-group box-shadow">
-			<h4 class="window-header"><span>FrontEnd</span> ♪</h4>
-			<MenuItem techIcon="blazor" Title="Testo" />
+			<MenuItem techIcon="Js" Title="JavaScript" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
+			<MenuItem techIcon="Py" Title="Python" />
+		</MenuTab>
+		<MenuTab Title="FrameWorks y Librarias">
+			<MenuItem techIcon=".NET" Title="ASP.NET" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
-		</div>
-				<div class="tech-group box-shadow">
-			<h4 class="window-header"><span>FrontEnd</span> ♪</h4>
-			<MenuItem techIcon="blazor" Title="Testo" />
+			<MenuItem techIcon="blazor" Title=".NET Blazor" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
+			<MenuItem techIcon=".NET" Title=".NET MAUI" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
-		</div>
-				<div class="tech-group box-shadow">
-			<h4 class="window-header"><span>FrontEnd</span> ♪</h4>
-			<MenuItem techIcon="blazor" Title="Testo" />
+			<MenuItem techIcon="Unity" Title="Unity" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
+			<MenuItem techIcon="OpenGL" Title="OpenGL GLFW" />
 			<hr />
-				<MenuItem techIcon="blazor" Title="Testo" />
-		</div>
+			<MenuItem techIcon="OpenCV" Title="OpenCV" />
+			<hr />
+			<MenuItem techIcon="React" Title="ReactJS" />
+		</MenuTab>
+		<MenuTab Title="Base de Datos">
+			<MenuItem techIcon="SQL" Title="SQL Server" />
+			<hr />
+			<MenuItem techIcon="MySQL" Title="MySQL" />
+		</MenuTab>
+		<MenuTab Title="Herramientas y Plataformas">
+			<MenuItem techIcon="GDS" Title="Google Data Studio" />
+			<hr />
+			<MenuItem techIcon="GCP" Title="Google Cloud" />
+			<hr />
+			<MenuItem techIcon="AWS" Title="AWS" />
+			<hr />
+			<MenuItem techIcon="Redis" Title="Redis" />
+			<hr />
+			<MenuItem techIcon="Kafka" Title="Kafka" />
+		</MenuTab>
 	</div>
 </div>
 @code {

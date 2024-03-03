@@ -23,6 +23,7 @@
 			techIcons["AWS"] = "icons/amazon-web-services-2.svg";
 			techIcons["Redis"] = "https://cdn.icon-icons.com/icons2/2415/PNG/512/redis_plain_logo_icon_146366.png";
 			techIcons["Kafka"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Apache_kafka.svg/473px-Apache_kafka.svg.png";
+			techIcons["discord"] = "icons/icons8-discord.svg";
 		}
 
 		public String getIconSrc(String name)

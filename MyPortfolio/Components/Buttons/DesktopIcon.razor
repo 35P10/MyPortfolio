@@ -1,4 +1,4 @@
-﻿<button class="card">
+﻿<button class="card" onclick=@OnClick>
     <img class="card-img-top" src="@ImageUrl" alt="@Title">
     <div class="card-body">
         <p>@Title</p>
@@ -12,4 +12,7 @@
 
     [Parameter]
     public string Title { get; set; }
+
+    [Parameter]
+    public EventCallback OnClick { get; set; }
 }

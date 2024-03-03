@@ -11,3 +11,22 @@
         font-size: 18px;
     }
 }
+
+@media (min-width: 1024px) {
+    .tech-window {
+        width: 30%;
+        display: flex;
+        flex: 1;
+    }
+
+    .tech-window-header {
+        writing-mode: vertical-rl;
+        transform: scale(-1);
+    }
+
+    .tech-list {
+        display: block;
+        flex: 1;
+        background-color: #BDBEBD;
+    }
+}

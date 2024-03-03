@@ -19,3 +19,17 @@
         box-shadow: 0px -1px 0px 0px #000 inset, -1px 0px 0px 0px #000 inset, 1px 1px 0px 0px #FFF inset, 0px -2px 0px 0px #7B7D7B inset, -2px 0px 0px 0px #7B7D7B inset, 2px 2px 0px 0px #DEDFDE inset, 0px 0px 0px 3px #BDBEBD inset;
     }
 }
+
+
+.window-content {
+    height: 320px;
+}
+
+@media (min-width: 1024px) {
+    .aboutme {
+        width: 65%;
+    }
+    .window-content {
+        height: 512px;
+    }
+}

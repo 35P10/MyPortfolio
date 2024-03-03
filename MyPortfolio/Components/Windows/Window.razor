@@ -1,6 +1,6 @@
 ﻿@using MyPortfolio.Components.Windows.Tab
 
-<div class="window box-shadow">
+<div class="window box-shadow @WindowClass">
     <div class="window-header">
 		<h3>@Title</h3>
 		<button type="button"
@@ -21,7 +21,7 @@
 					</button>
 				}
 			</div>
-			<div class="window-content" style="@GetHeight()">
+			<div class="window-content">
 				@ChildContent
 			</div>
 	</div>
@@ -38,6 +38,8 @@
 	[Parameter]
 	public String Title { get; set; }
 
+	[Parameter]
+	public string WindowClass { get; set; } = "";
 
 	public TabPage ActivePage { get; set; }
 	List<TabPage> Pages = new List<TabPage>();

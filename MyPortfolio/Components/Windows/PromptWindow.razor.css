@@ -31,3 +31,9 @@
 		font-size: 24px;
 	}
 }
+
+@media (min-width: 1440px) {
+	.window {
+		padding: 64px 256px;
+	}
+}

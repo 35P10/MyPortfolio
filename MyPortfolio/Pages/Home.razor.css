@@ -6,6 +6,14 @@
 
 @media (min-width: 1024px) {
     .XD {
-        padding: 64px;
+        padding: 0 64px;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+}
+
+@media (min-width: 1440px) {
+    .XD {
+        padding: 0 256px;
     }
 }

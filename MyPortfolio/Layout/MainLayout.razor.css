@@ -85,8 +85,11 @@ main {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+}
 
-    article {
+@media (min-width: 1024px) {
+    main {
         padding: 0 0;
+        gap: 32px;
     }
 }

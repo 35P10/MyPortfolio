@@ -1,33 +1,9 @@
-﻿<img class="icon" src=@techIcons[Technology] alt=@Technology>
+﻿@using MyPortfolio.Services
+@inject ResourcesService SRCRepo
+
+<img class="icon" src=@SRCRepo.getIconSrc(Technology) alt=@Technology>
 
 @code {
 	[Parameter]
 	public string Technology { get; set; }
-
-	private Dictionary<string,string> techIcons = new Dictionary<string,string>();
-
-	protected override void OnInitialized()
-	{
-		techIcons["blazor"] = "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png";
-		techIcons[".NET"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1024px-.NET_Core_Logo.svg.png";
-		techIcons["CS"] = "https://thinkotb.b-cdn.net/wp-content/uploads/2023/01/c-4.svg";
-		techIcons["CPP"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png";
-		techIcons["Py"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png";
-		techIcons["Js"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png";
-		techIcons["React"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png";
-		techIcons["Unity"] = "https://cdn.worldvectorlogo.com/logos/unity-69.svg";
-		techIcons["OpenGL"] = "https://www.profesionalreview.com/wp-content/uploads/2019/11/opengl-01-.png";
-		techIcons["OpenCV"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/OpenCV_Logo_with_text_svg_version.svg/800px-OpenCV_Logo_with_text_svg_version.svg.png";
-		techIcons["SQL"] = "https://user-images.githubusercontent.com/4249331/52232852-e2c4f780-28bd-11e9-835d-1e3cf3e43888.png";
-		techIcons["MySQL"] = "https://e7.pngegg.com/pngimages/747/798/png-clipart-mysql-mysql-thumbnail.png";
-		techIcons["GDS"] = "https://seeklogo.com/images/G/google-data-studio-logo-6577854870-seeklogo.com.png";
-		techIcons["GCP"] = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-cloud-icon.png";
-		techIcons["AWS"] = "https://d3sxshmncs10te.cloudfront.net/icon/premium/png-256/2284623.png?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTcwOTQyMTMxNywicSI6bnVsbCwiaWF0IjoxNzA5MTYyMTE3fQ__.613de8c2559d9c446c0ea1714cb7f1a98f45204ee7b930618096324939bfa860";
-		techIcons["Redis"] = "https://cdn.icon-icons.com/icons2/2415/PNG/512/redis_plain_logo_icon_146366.png";
-		techIcons["Kafka"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Apache_kafka.svg/473px-Apache_kafka.svg.png";
-
-		if (techIcons[Technology] == null)
-			throw new ArgumentNullException("Tecnologia no reconocida");
-
-	}
 }

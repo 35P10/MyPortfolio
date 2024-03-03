@@ -2,11 +2,17 @@
 	color: #ffffff;
 	padding: 4px;
 	background-color: #000000;
-	font-family: Consolas;
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	display: block;
+	flex: 1;
+}
+
+.window {
+	display: flex;
+	flex-direction: column;
 }
 
 @media (min-width: 1024px) {

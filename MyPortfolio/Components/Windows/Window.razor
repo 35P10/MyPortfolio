@@ -1,6 +1,6 @@
 ﻿@using MyPortfolio.Components.Windows.Tab
 
-<div class="window box-shadow @WindowClass">
+<div id=@Id class ="window box-shadow @WindowClass">
     <div class="window-header">
 		<h3>@Title</h3>
 		<button type="button"
@@ -37,6 +37,9 @@
 
 	[Parameter]
 	public String Title { get; set; }
+
+	[Parameter]
+	public String Id { get; set; }
 
 	[Parameter]
 	public string WindowClass { get; set; } = "";

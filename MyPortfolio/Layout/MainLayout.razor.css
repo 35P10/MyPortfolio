@@ -18,11 +18,14 @@ main {
     flex-direction: column;
     gap: 8px;
     padding: 8px 8px;
+    margin-bottom: 16px;
 }
 
 .sidebar {
-    background: var(--color-primary, #B8B8B8);
+    background: #B8B8B8;
+    top: 0;
     position: sticky;
+    z-index: 20;
 }
 
 .top-row {

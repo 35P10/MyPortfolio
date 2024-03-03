@@ -1,6 +1,6 @@
 ﻿@using MyPortfolio.Components.Windows.Tab
 
-<div class="window box-shadow">
+<div id=@Id class ="window box-shadow">
 	<div class="window-header">
 		<h3>@Title</h3>
 		<button type="button"
@@ -58,6 +58,8 @@
 	[Parameter]
 	public String Title { get; set; }
 
+	[Parameter]
+	public String Id { get; set; }
 
 	public String ActiveGroup { get; set; }
 	public ExplorerTab ActivePage { get; set; }

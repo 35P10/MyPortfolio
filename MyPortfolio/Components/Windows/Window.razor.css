@@ -6,6 +6,8 @@
         align-items: end;
         button
         {
+            padding-left: 8px;
+            padding-right: 8px;
             border-radius: 4px 4px 0 0;
             box-shadow: -1px 0px 0px 0px #000 inset, 1px 1px 0px 0px #FFF inset, -2px 0px 0px 0px #7B7D7B inset, 2px 2px 0px 0px #DEDFDE inset;
         }

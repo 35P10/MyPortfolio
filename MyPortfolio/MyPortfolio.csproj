@@ -28,7 +28,6 @@
     <Content Include="Components\Windows\Window.razor.css" />
     <Content Include="Pages\AboutMe\Formation.razor.css" />
     <Content Include="Pages\AboutMe\Tab1Content.razor.css" />
-    <Content Include="Pages\AboutMe\Tab2Content.razor.css" />
   </ItemGroup>
 
   <ItemGroup>

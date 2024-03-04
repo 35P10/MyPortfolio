@@ -1,9 +1,0 @@
-﻿@using MyPortfolio.Services
-@inject ResourcesService SRCRepo
-
-<img class="icon" src=@SRCRepo.getIconSrc(Technology) alt=@Technology>
-
-@code {
-	[Parameter]
-	public string Technology { get; set; }
-}

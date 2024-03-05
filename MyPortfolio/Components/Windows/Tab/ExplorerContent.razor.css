@@ -45,12 +45,36 @@ background-size:cover;
 .links {
     height: auto;
     display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    hr {
+           height: 100%;
+       }
     a   {
         width: 32px;
         height: 32px;
         padding: 6px;
     }
 
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.tech-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-weight: 700;
+}
+
+.tech-icon {
+    padding: 6px;
+    width: 32px;
+    height: 32px;
     img {
         width: 100%;
         height: 100%;

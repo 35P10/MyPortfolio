@@ -1,4 +1,6 @@
-﻿<div class="content">
+﻿@using MyPortfolio.Components.Buttons;
+
+<div class="content">
 	<div class="content-content">
 		<div class="box-shadow-3 img" style="background-image:url('@SourceImg')"></div>
 		<div class="text">
@@ -12,6 +14,19 @@
 			<a class="box-shadow" href="@SourceCode">
 				<img src="https://pngimg.com/uploads/github/github_PNG27.png" loading="lazy" alt="source link: github icon">
 			</a>
+		}
+		@if (Techs.Count != 0)
+		{
+			<hr />
+			<div class="tech-section"> 
+			<p>Tecnologías:</p>
+			@foreach(String tech in Techs)
+			{
+				<div class="box-shadow-sub-2 tech-icon">
+					<TechIcon Technology=@tech />
+				</div>
+			}
+			</div>
 		}
 	</div>
 </div>
@@ -29,4 +44,7 @@
 
 	[Parameter]
 	public String SourceImg { get; set; }
+
+	[Parameter]
+	public List<String> Techs { get; set; } = new List<string>();
 }

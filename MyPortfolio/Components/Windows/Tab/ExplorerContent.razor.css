@@ -1,17 +1,16 @@
 ﻿.content {
-width: 100%;
-height: 100%;
-display: flex;
-gap: 0;
-padding: 0;
-flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    flex-direction: column;
 }
 
 .content-content {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 8px;
     gap: 8px;
 }
 
@@ -35,6 +34,7 @@ background-size:cover;
 
     p {
         display: block;
+        padding: 8px;
         overflow-y: auto;
         margin: 0;
         flex: 1;
@@ -45,10 +45,10 @@ background-size:cover;
 .links {
     height: auto;
     display: flex;
-    padding: 0 8px 4px 8px;
     a   {
         width: 32px;
         height: 32px;
+        padding: 6px;
     }
 
     img {

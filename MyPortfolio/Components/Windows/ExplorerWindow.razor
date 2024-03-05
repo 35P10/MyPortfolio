@@ -10,8 +10,8 @@
 	</div>
 	<CascadingValue Value="this">
 		<div class="window-content-section explorer-window">
-			<div class="explorer-window-tabs box-shadow explorer-tab">
-				<div class="group-section box-shadow">
+			<div class="explorer-window-tabs box-shadow-2 explorer-tab">
+				<div class="group-section box-shadow-sub">
 					<div class="explorer-option">
 						📁35P10:\Projects
 					</div>
@@ -24,7 +24,7 @@
 					}
 				</div>
 				<hr />
-				<div class="tab-section box-shadow">
+				<div class="tab-section box-shadow-sub">
 						@if (Projects.Count > 0)
 						{
 							@foreach (ExplorerTab tabPage in Projects[ActiveGroup])
@@ -38,9 +38,9 @@
 						}
 				</div>
 			</div>
-			<div class="explorer-window-content box-shadow explorer-tab">
-				<p class="input-box"><span class="box-shadow">@Path</span></p>
-				<div class="box-shadow" style="@GetHeight()">
+			<div class="explorer-window-content box-shadow-sub-2 explorer-tab">
+				<p class="input-box"><span class="box-shadow-sub">@Path</span></p>
+				<div style="display: block; @GetHeight()">
 					@ChildContent
 				</div>
 			</div>

@@ -59,10 +59,12 @@
 }
 /* /Components/Buttons/TechIcon.razor.rz.scp.css */
 /* /Components/Windows/ExplorerWindow.razor.rz.scp.css */
+.window[b-rihg3f5cz2] {
+    width: 100%;
+}
 .explorer-window[b-rihg3f5cz2] {
     gap: 4px;
     padding: 8px;
-
     .tab-section {
     }
  
@@ -81,6 +83,7 @@
     gap: 4px;
     font-size: 10px;
     .group-section, .tab-section {
+        overflow-y:auto;
         height: 100px;
         background-color: #FFFFFF;
         flex: 1;
@@ -201,13 +204,37 @@ background-size:cover;
 .links[b-lhrqbvxgoz] {
     height: auto;
     display: flex;
-    a   {
+    gap: 8px;
+    flex-wrap: wrap;
+    hr {
+           height: 100%;
+       }
+    a[b-lhrqbvxgoz]   {
         width: 32px;
         height: 32px;
         padding: 6px;
     }
 
     img[b-lhrqbvxgoz] {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.tech-section[b-lhrqbvxgoz] {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-weight: 700;
+}
+
+.tech-icon[b-lhrqbvxgoz] {
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    img {
         width: 100%;
         height: 100%;
     }

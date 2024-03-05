@@ -134,6 +134,34 @@ code {
     box-shadow: 0px -1px 0px 0px #000 inset, -1px 0px 0px 0px #000 inset, 1px 1px 0px 0px #DEDFDE inset, 0px -2px 0px 0px #7B7D7B inset, -2px 0px 0px 0px #7B7D7B inset, 2px 2px 0px 0px #FFF inset, 0px 0px 0px 3px #BDBEBD inset;
 }
 
+.box-shadow-2 {
+    color: black;
+    display: block;
+    padding: 3px;
+    box-shadow: 0px -1px 0px 0px #808080 inset,-1px 0px 0px 0px #808080 inset, 1px 1px 0px 0px #FFF inset;
+}
+
+.box-shadow-3 {
+    color: black;
+    display: block;
+    padding: 3px;
+    box-shadow: 0px -1px 0px 0px #7B7D7B inset, -1px 0px 0px 0px #7B7D7B inset, 1px 1px 0px 0px #DEDFDE inset, 0px -2px 0px 0px #FFF inset, -2px 0px 0px 0px #FFF inset, 2px 2px 0px 0px #7B7D7B inset;
+}
+
+.box-shadow-sub {
+    color: black;
+    display: block;
+    padding: 3px;
+    box-shadow: 0px -1px 0px 0px #FFF inset,-1px 0px 0px 0px #FFF inset, 1px 1px 0px 0px #808080 inset, 0px -2px 0px 0px #808080 inset, -2px 0px 0px 0px #808080 inset, 2px 2px 0px 0px #000 inset;
+}
+
+.box-shadow-sub-2 {
+    color: black;
+    display: block;
+    padding: 3px;
+    box-shadow: 0px -1px 0px 0px #FFF inset,-1px 0px 0px 0px #FFF inset, 1px 1px 0px 0px #808080 inset;
+}
+
 .explorer-option {
     display: block;
     width: 100%;

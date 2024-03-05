@@ -1,12 +1,12 @@
-﻿<div class="explorer-content">
-	<img class="explorer-content-img" src=@SourceImg />
-	<h4>
-		@ProjectTitle
-	</h4>
-	<p class="box-shadow">
-		@Description
-	</p>
-	<div class="explorer-content-links">
+﻿<div class="content">
+	<div class="content-content">
+		<div class="img" style="background-image:url('@SourceImg')"></div>
+		<div class="text">
+			<h4>@ProjectTitle</h4>
+			<p class="box-shadow">@Description</p>
+		</div>
+	</div>
+	<div class="links">
 		@if (SourceCode != "")
 		{
 			<a class="box-shadow" href="@SourceCode">

@@ -13,8 +13,10 @@
 }
 
 @media (min-width: 1024px) {
+    .window {
+        width: 100%;
+    }
     .tech-window {
-        width: 30%;
         display: flex;
         flex: 1;
     }

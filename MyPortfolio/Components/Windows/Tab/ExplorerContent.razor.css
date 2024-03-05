@@ -1,44 +1,69 @@
-﻿.explorer-content {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	gap: 8px;
-	flex-direction: column;
-	h4 {
-		display: block;
-		padding: 0 8px;
-	}
-	p {
-		display: block;
-		padding: 4px 8px;
-		margin: 0 8px;
-		background-color: #FFF;
-		flex: 1;
-		overflow-y: auto;
-	}
-
-	img {
-		object-fit: cover;
-	}
+﻿.content {
+width: 100%;
+height: 100%;
+display: flex;
+gap: 0;
+padding: 0;
+flex-direction: column;
 }
 
-.explorer-content-img {
-	width: 100%;
-	height: 35%;
+.content-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 8px;
+    gap: 8px;
 }
 
-
-.explorer-content-links {
-	display: flex;
-	padding: 0 8px 4px 8px;
-	a {
-		width: 32px;
-		height: 32px;
-	}
-	img {
-		width: 100%;
-		height: 100%;
-	}
+.img {
+display:block;
+width: 100%;
+height: 60%;
+background-position:center;
+background-size:cover;
 }
 
+.text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    h4 {
+        display: block;
+        margin: 0;
+    }
 
+    p {
+        display: block;
+        overflow-y: auto;
+        margin: 0;
+        flex: 1;
+        background-color: #ffffff;
+    }
+}
+
+.links {
+    height: auto;
+    display: flex;
+    padding: 0 8px 4px 8px;
+    a   {
+        width: 32px;
+        height: 32px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-content {
+        flex-direction: row;
+    }
+
+    .img {
+        width: 40%;
+        height: 100%;
+    }
+}

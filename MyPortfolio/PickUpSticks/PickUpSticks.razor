@@ -1,0 +1,51 @@
+﻿@page "/PickUpSticks"
+@using MyPortfolio.PickUpSticks.Components;
+<div style="position:relative; background-color:azure; width: 100%; height: 100%;">
+<h3>PickUpSticks</h3>
+	@for(int i = 0; i < NumberOfSticks; i++ )
+	{
+		<Stick Length=20 Width=500 Orientation=@GetRandomBool() StartX=@random.Next(10, 1000) StartY=@random.Next(10, 1000) ZIndex=@i Color=@GetRandomColor() @ref="ComponentRef" />
+	}
+
+</div>
+@code {
+	Random random = new Random();
+	public int NumberOfSticks = 20;
+
+	List<Stick> ComponentRefs = new List<Stick>();
+	Stick ComponentRef
+	{
+		set { ComponentRefs.Add(value); }
+	}
+
+	protected override void OnInitialized()
+	{
+		Random random = new Random();
+	}
+
+	private bool GetRandomBool()
+	{
+		return random.Next(0, 2) == 0;
+	}
+
+	private string GetRandomColor()
+	{
+		return random.Next(0, 2) switch
+		{
+			1 => "blue",
+			2 => "#000",
+			_ => "#FFF"
+		};
+	}
+
+	public bool checkOverlapping(Stick one)
+	{
+		bool ans = true;
+		for (int i = one.ZIndex + 1; i < NumberOfSticks; i++)
+		{
+			ans = one.IsOverlapping(ComponentRefs[i]);
+		}
+		return ans;
+	}
+
+}

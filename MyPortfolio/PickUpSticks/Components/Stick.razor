@@ -1,0 +1,58 @@
+﻿<div class="stick" style="width: @getSizePX(Width); height:@getSizePX(Length); left:@getSizePX(StartX); top:@getSizePX(StartY); z-index:@ZIndex; background-color:@Color ;" @onclick=InvokeOnClick>
+</div>
+
+@code {
+	[Parameter]
+	public int Length { get; set; } = 0;
+	[Parameter]
+	public int Width { get; set; } = 0;
+	[Parameter]
+	public int StartY { get; set; } = 0;
+	[Parameter]
+	public int StartX { get; set; } = 0;
+	[Parameter] // vertical = true ; false = horizantal
+	public bool Orientation { get; set; } = true;
+	[Parameter]
+	public int ZIndex { get; set; } = 0;
+	[Parameter]
+	public String Color { get; set; } = "#FFF";
+	[Parameter]
+	public Action HandleOverlapping { get; set; }
+
+	public int Bottom { get; set; }
+	public int Top { get; set; }
+	public int Left { get; set; }
+	public int Right { get; set; }
+
+	protected override void OnInitialized()
+	{
+		if (Orientation == false)
+		{
+			int temp = Length;
+			Length = Width;
+			Width = temp;
+		};
+		Bottom = StartY;
+		Top = Bottom + Length;
+		Left = StartX;
+		Right = Left + Width;
+	}
+
+	public bool IsOverlapping(Stick other)
+	{
+		bool overlapX = this.Left < other.Right && this.Right > other.Left;
+		bool overlapY = this.Bottom < other.Top && this.Top > other.Bottom;
+
+		return overlapX && overlapY;
+	}
+
+	private string getSizePX(int x)
+	{
+		return x.ToString() + "px";
+	}
+
+	private void InvokeOnClick()
+	{
+		HandleOverlapping?.Invoke();
+	}
+}

@@ -1,16 +1,32 @@
 ﻿@page "/PickUpSticks"
 @using MyPortfolio.PickUpSticks.Components;
 <div style="position:relative; background-color:azure; width: 100%; height: 100%;">
-<h3>PickUpSticks</h3>
-	@for(int i = 0; i < NumberOfSticks; i++ )
+
+	@if (gameStatus == 0)
 	{
-		<Stick Length=20 Width=500 Orientation=@GetRandomBool() StartX=@random.Next(10, 1000) StartY=@random.Next(10, 1000) ZIndex=@i Color=@GetRandomColor() @ref="ComponentRef" />
+		<p>juega p.</p>	
+		<h3>PickUpSticks</h3>
+		@for(int i = 0; i < NumberOfSticks; i++ )
+		{
+			int index = i;
+			<Stick Length=20 Width=500 Orientation=@GetRandomBool() StartX=@random.Next(10, 1000) StartY=@random.Next(10, 1000) ZIndex=@i Color=@GetRandomColor() @ref="ComponentRef" HandleOverlapping="() => checkOverlapping(index)" />
+		}
+	} 
+	else if (gameStatus == 1)
+	{
+		<p>nice</p>
 	}
+	else
+	{
+		<p>gameover</p>
+	}
+
 
 </div>
 @code {
 	Random random = new Random();
 	public int NumberOfSticks = 20;
+	private int gameStatus = 0;
 
 	List<Stick> ComponentRefs = new List<Stick>();
 	Stick ComponentRef
@@ -38,14 +54,24 @@
 		};
 	}
 
-	public bool checkOverlapping(Stick one)
+	public bool checkOverlapping(int one)
 	{
-		bool ans = true;
-		for (int i = one.ZIndex + 1; i < NumberOfSticks; i++)
+		for (int i = ComponentRefs[one].ZIndex + 1; i < NumberOfSticks; i++)
 		{
-			ans = one.IsOverlapping(ComponentRefs[i]);
+			if (ComponentRefs[i].enable == true && ComponentRefs[one].IsOverlapping(ComponentRefs[i]) == true)
+			{
+				gameStatus = 2;
+				StateHasChanged();
+				return true;
+			}
 		}
-		return ans;
+		ComponentRefs[one].enable = false;
+		if (--NumberOfSticks == 0)
+		{
+		gameStatus = 1;
+			StateHasChanged();
+		}
+		return false;
 	}
 
 }

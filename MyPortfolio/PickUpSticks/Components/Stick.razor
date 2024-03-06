@@ -1,5 +1,8 @@
-﻿<div class="stick" style="width: @getSizePX(Width); height:@getSizePX(Length); left:@getSizePX(StartX); top:@getSizePX(StartY); z-index:@ZIndex; background-color:@Color ;" @onclick=InvokeOnClick>
-</div>
+﻿@if (enable == true)
+{	
+	<div class="stick" style="width: @getSizePX(Width); height:@getSizePX(Length); left:@getSizePX(StartX); top:@getSizePX(StartY); z-index:@ZIndex; background-color:@Color ;" @onclick=InvokeOnClick>
+	</div>
+}
 
 @code {
 	[Parameter]
@@ -23,6 +26,7 @@
 	public int Top { get; set; }
 	public int Left { get; set; }
 	public int Right { get; set; }
+	public bool enable { get; set; } = true;
 
 	protected override void OnInitialized()
 	{

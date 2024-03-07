@@ -46,10 +46,14 @@
 
 	private string GetRandomColor()
 	{
-		return random.Next(0, 2) switch
+		return random.Next(1, 7) switch
 		{
-			1 => "blue",
-			2 => "#000",
+			1 => "#06FBFD", //cyan
+			2 => "#FB0206",	// red
+			3 => "#FF01FD", // pink
+			4 => "#0400F7", // blue
+			5 => "#05FC06", // green
+			6 => "#FFFE04", // yellow
 			_ => "#FFF"
 		};
 	}

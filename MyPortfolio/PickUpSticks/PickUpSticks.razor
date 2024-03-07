@@ -1,6 +1,8 @@
 ﻿@page "/PickUpSticks"
 @using MyPortfolio.PickUpSticks.Components;
-<div style="position:relative; background-color:azure; width: 100%; height: 100%;">
+@inject IJSRuntime JSRuntime;
+
+<div id="pickupcontainer" style="position:relative; background-color:azure; width: 100%; height: 100%;">
 
 	@if (gameStatus == 0)
 	{
@@ -9,14 +11,14 @@
 		@for(int i = 0; i < NumberOfSticks; i++ )
 		{
 			int index = i;
-			<Stick Length=20 Width=500 Orientation=@GetRandomBool() StartX=@random.Next(10, 1000) StartY=@random.Next(10, 1000) ZIndex=@i Color=@GetRandomColor() @ref="ComponentRef" HandleOverlapping="() => checkOverlapping(index)" />
+			<Stick Length=@StickHeight Width=@StickSize StartX=@SticksSize[i].Item1 StartY=@SticksSize[i].Item2 Orientation=SticksOrientation[i] ZIndex=@i @ref="ComponentRef" HandleOverlapping="() => checkOverlapping(index)" />
 		}
 	} 
 	else if (gameStatus == 1)
 	{
 		<p>nice</p>
 	}
-	else
+	else if (gameStatus == 2)
 	{
 		<p>gameover</p>
 	}
@@ -25,18 +27,59 @@
 </div>
 @code {
 	Random random = new Random();
+
+	private int Height = 512;
+	private int Width = 512;
+
+	private int StickSize = 100;
+	private int StickHeight = 24;
+	private List<bool> SticksOrientation = new List<bool>();
+
 	public int NumberOfSticks = 20;
-	private int gameStatus = 0;
+	private int ActiveSticks;
+	private int gameStatus = -1;
 
 	List<Stick> ComponentRefs = new List<Stick>();
 	Stick ComponentRef
 	{
-		set { ComponentRefs.Add(value); }
+		set {
+			value.Color = GetRandomColor();
+			ComponentRefs.Add(value); 
+		}
 	}
+
+	private List<Tuple<int, int>> SticksSize = new List<Tuple<int, int>>();
 
 	protected override void OnInitialized()
 	{
 		Random random = new Random();
+		ActiveSticks = NumberOfSticks;
+		@for (int i = 0; i < NumberOfSticks; i++)
+		{
+			SticksOrientation.Add(GetRandomBool());
+		}
+	}
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			await ObtenerDimensionesElemento();
+			@for (int i = 0; i < NumberOfSticks; i++)
+			{
+				if (SticksOrientation[i] == true)
+				{
+					SticksSize.Add(Tuple.Create(@random.Next(0, Width - StickSize), random.Next(0, Height - StickHeight)));
+				}
+				else
+				{
+					SticksSize.Add(Tuple.Create(@random.Next(0, Width - StickHeight), random.Next(0, Height - StickSize)));
+				}
+			}
+
+			gameStatus = 0;
+			StateHasChanged();
+		}
 	}
 
 	private bool GetRandomBool()
@@ -70,12 +113,26 @@
 			}
 		}
 		ComponentRefs[one].enable = false;
-		if (--NumberOfSticks == 0)
-		{
-		gameStatus = 1;
+		if (--ActiveSticks == 0) {
+			gameStatus = 1;
 			StateHasChanged();
 		}
 		return false;
+	}
+
+	private async Task ObtenerDimensionesElemento()
+	{
+		var dimensiones = await JSRuntime.InvokeAsync<Dimensiones>("getElementSize", "pickupcontainer");
+		Console.WriteLine($"Ancho: {dimensiones.Ancho}, Alto: {dimensiones.Alto}");
+		Width = dimensiones.Ancho;
+		Height = dimensiones.Alto;
+		StickSize = Math.Min(Width, Height) * 3 / 4;
+	}
+
+	public class Dimensiones
+	{
+		public int Ancho { get; set; }
+		public int Alto { get; set; }
 	}
 
 }

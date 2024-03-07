@@ -1,6 +1,6 @@
 ﻿@if (enable == true)
-{	
-	<div class="stick" style="width: @getSizePX(Width); height:@getSizePX(Length); left:@getSizePX(StartX); top:@getSizePX(StartY); z-index:@ZIndex; background-color:@Color ;" @onclick=InvokeOnClick>
+{
+	<div class="stick" style="width: @getSizePX(_Width); height:@getSizePX(_Length); left:@getSizePX(StartX); top:@getSizePX(StartY); z-index:@ZIndex; background-color:@Color ;" @onclick=InvokeOnClick>
 	</div>
 }
 
@@ -13,7 +13,7 @@
 	public int StartY { get; set; } = 0;
 	[Parameter]
 	public int StartX { get; set; } = 0;
-	[Parameter] // vertical = true ; false = horizantal
+	[Parameter] // horizantal = true ; false = vertical
 	public bool Orientation { get; set; } = true;
 	[Parameter]
 	public int ZIndex { get; set; } = 0;
@@ -22,6 +22,8 @@
 	[Parameter]
 	public Action HandleOverlapping { get; set; }
 
+	public int _Length { get; set; }
+	public int _Width { get; set; }
 	public int Bottom { get; set; }
 	public int Top { get; set; }
 	public int Left { get; set; }
@@ -30,16 +32,18 @@
 
 	protected override void OnInitialized()
 	{
+		_Width = Width;
+		_Length = Length;
 		if (Orientation == false)
 		{
-			int temp = Length;
-			Length = Width;
-			Width = temp;
+			int temp = _Length;
+			_Length = Width;
+			_Width = temp;
 		};
 		Bottom = StartY;
-		Top = Bottom + Length;
+		Top = Bottom + _Length;
 		Left = StartX;
-		Right = Left + Width;
+		Right = Left + _Width;
 	}
 
 	public bool IsOverlapping(Stick other)

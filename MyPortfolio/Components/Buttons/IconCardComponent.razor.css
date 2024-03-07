@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #BDBEBD;
+    background-color: var(--sidebar-icon);
     color: #000000;
     font-size: 12px;
     font-style: normal;

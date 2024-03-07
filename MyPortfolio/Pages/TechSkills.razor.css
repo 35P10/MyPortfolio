@@ -1,10 +1,10 @@
 ﻿.tech-window-header {
-    background-color: #808080;
-        color: #C0C0C0;
+    background-color: var(--shadow-3);
+    color: var(--font-color-negative-2);
     padding: 8px 4px;
     span
         {
-        color: #FFFFFF;
+        color: var(--font-color-negative);
             font-weight: 700;
         }
     h3 {

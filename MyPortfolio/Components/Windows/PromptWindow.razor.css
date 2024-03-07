@@ -1,7 +1,7 @@
 ﻿.window-content-section {
-	color: #ffffff;
+	color: var(--font-color-negative);
 	padding: 4px;
-	background-color: #000000;
+	background-color: var(--window-console);
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 400;
@@ -22,7 +22,7 @@
 
 	.window {
 		padding: 48px 128px;
-		background-color: #000000;
+		background-color: var(--window-console);
 		border: none;
 		box-shadow: none;
 	}

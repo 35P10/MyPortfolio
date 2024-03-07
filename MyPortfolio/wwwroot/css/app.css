@@ -1,3 +1,65 @@
+:root {
+    /*light theme*/
+    --background: #007B7C;
+    --background-2: #BDBEBD;
+    --background-3: #FFF;
+    --font-color: black;
+    --font-color-negative: #FFF;
+    --font-color-negative-2: #C0C0C0;
+    --accent-color: #000179;
+
+    --window-header: var(--accent-color);
+
+    --shadow-1: #000;
+    --shadow-2: #7B7D7B;
+    --shadow-3: #808080;
+    --shadow-4: #DEDFDE;
+    --shadow-5: #FFF;
+
+    --hr-shadow-1:#7B7D7B;
+    --hr-shadow-2:#DEDFDE;
+
+    --sidebar: #BDBEBD;
+    --sidebar-icon: #BDBEBD;
+    
+    --welcome-red: #FF0000;
+    --welcome-blue: #0000FF;
+    --welcome-yellow: #FFFF00;
+    --welcome-green: #00FF00;
+
+    --window-console: black;
+}
+
+.dark-mode {
+    --background: #0d2818;
+    --background-2: #0d2818;
+    --background-3: #346856;
+    --font-color: #E0F8D0;
+    --font-color-negative: #0d2818;
+    --font-color-negative-2: #346856;
+    --accent-color: #E0F8D0;
+
+    --window-header: var(--accent-color);
+
+    --shadow-1: #346856;
+    --shadow-2: #88C070;
+    --shadow-3: #88C070;
+    --shadow-4: #88C070;
+    --shadow-5: #E0F8D0;
+
+    --hr-shadow-1:#88C070;
+    --hr-shadow-2:#E0F8D0;
+
+    --sidebar: #88C070;
+    --sidebar-icon: #E0F8D0;
+
+    --welcome-red: #0d2818;
+    --welcome-blue: #0d2818;
+    --welcome-yellow: #0d2818;
+    --welcome-green: #0d2818;
+
+    --window-console: #E0F8D0;
+}
 
 html, body {
     font-family: Consolas;
@@ -5,6 +67,7 @@ html, body {
     font-style: normal;
     font-size: 12px;
     line-height: normal;
+    color: var(--font-color);
 }
 
 * {
@@ -127,39 +190,39 @@ code {
 /* Window style */
 
 .box-shadow {
-    color: black;
+    color: var(--font-color);
     display: block;
     padding: 3px;
-    background-color: #BDBEBD;
-    box-shadow: 0px -1px 0px 0px #000 inset, -1px 0px 0px 0px #000 inset, 1px 1px 0px 0px #DEDFDE inset, 0px -2px 0px 0px #7B7D7B inset, -2px 0px 0px 0px #7B7D7B inset, 2px 2px 0px 0px #FFF inset, 0px 0px 0px 3px #BDBEBD inset;
+    background-color: var(--background-2);
+    box-shadow: 0px -1px 0px 0px var(--shadow-1) inset, -1px 0px 0px 0px var(--shadow-1) inset, 1px 1px 0px 0px var(--shadow-4) inset, 0px -2px 0px 0px var(--shadow-2) inset, -2px 0px 0px 0px var(--shadow-2) inset, 2px 2px 0px 0px var(--shadow-5) inset, 0px 0px 0px 3px var(--background-2) inset;
 }
 
 .box-shadow-2 {
-    color: black;
+    color: var(--font-color);
     display: block;
     padding: 3px;
-    box-shadow: 0px -1px 0px 0px #808080 inset,-1px 0px 0px 0px #808080 inset, 1px 1px 0px 0px #FFF inset;
+    box-shadow: 0px -1px 0px 0px var(--shadow-3) inset,-1px 0px 0px 0px var(--shadow-3) inset, 1px 1px 0px 0px var(--shadow-5) inset;
 }
 
 .box-shadow-3 {
-    color: black;
+    color: var(--font-color);
     display: block;
     padding: 3px;
-    box-shadow: 0px -1px 0px 0px #7B7D7B inset, -1px 0px 0px 0px #7B7D7B inset, 1px 1px 0px 0px #DEDFDE inset, 0px -2px 0px 0px #FFF inset, -2px 0px 0px 0px #FFF inset, 2px 2px 0px 0px #7B7D7B inset;
+    box-shadow: 0px -1px 0px 0px var(--shadow-2) inset, -1px 0px 0px 0px var(--shadow-2) inset, 1px 1px 0px 0px var(--shadow-4) inset, 0px -2px 0px 0px var(--shadow-5) inset, -2px 0px 0px 0px var(--shadow-5) inset, 2px 2px 0px 0px var(--shadow-2) inset;
 }
 
 .box-shadow-sub {
-    color: black;
+    color: var(--font-color);
     display: block;
     padding: 3px;
-    box-shadow: 0px -1px 0px 0px #FFF inset,-1px 0px 0px 0px #FFF inset, 1px 1px 0px 0px #808080 inset, 0px -2px 0px 0px #808080 inset, -2px 0px 0px 0px #808080 inset, 2px 2px 0px 0px #000 inset;
+    box-shadow: 0px -1px 0px 0px var(--shadow-5) inset,-1px 0px 0px 0px var(--shadow-5) inset, 1px 1px 0px 0px var(--shadow-3) inset, 0px -2px 0px 0px var(--shadow-3) inset, -2px 0px 0px 0px var(--shadow-3) inset, 2px 2px 0px 0px var(--shadow-1) inset;
 }
 
 .box-shadow-sub-2 {
-    color: black;
+    color: var(--font-color);
     display: block;
     padding: 3px;
-    box-shadow: 0px -1px 0px 0px #FFF inset,-1px 0px 0px 0px #FFF inset, 1px 1px 0px 0px #808080 inset;
+    box-shadow: 0px -1px 0px 0px var(--shadow-5) inset,-1px 0px 0px 0px var(--shadow-5) inset, 1px 1px 0px 0px var(--shadow-3) inset;
 }
 
 .explorer-option {
@@ -170,8 +233,8 @@ code {
 }
 
 .explorer-option-selected {
-    background-color: #000179;
-    color: #FFF;
+    background-color: var(--window-header);
+    color: var(--font-color-negative);
 }
 
 .window {
@@ -191,16 +254,15 @@ code {
 .window-header {
     padding: 2px;
     display: flex;
-    background-color: #BDBEBD;
     flex-direction: row;
     align-items: center;
-    background: var(--color-accent, #000179);
+    background-color: var(--window-header);
     font-size: 12px;
-    color: white;
+    color: var(--font-color-negative);
     h3
     {
         flex: 1;
-        font-weight: 400;
+        font-weight: 700;
         margin: 0;
     }
 
@@ -236,6 +298,8 @@ code {
 }
 
 hr {
-    border-top: 1px solid #7B7D7B;
-    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    border-top: 1px solid var(--hr-shadow-1);
+    border-right: 1px solid var(--hr-shadow-1);
+    border-bottom: 1px solid var(--hr-shadow-2);
+    border-left: 1px solid var(--hr-shadow-2);
 }

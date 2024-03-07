@@ -2,12 +2,12 @@
 @using MyPortfolio.Components.Windows;
 
 <PromptWindow Title="Command Prompt" Height=@getStyle()>
-	<span style="color: #FF0000;">mensaje de bienvenida:</span>
+	<span style="color: var(--welcome-red);">mensaje de bienvenida:</span>
 	<TextLetterByLetter Text="¡Gracias por tomarte el tiempo de conocerme! Estoy emocionado por compartir mi trabajo contigo y espero que disfrutes explorando mi portafolio tanto como yo disfruté creándolo. Si tienes alguna pregunta o estás interesado en colaborar en futuros proyectos, no dudes en ponerte en contacto conmigo. ¡Vamos a crear algo increíble juntos!" Speed="1" @ref="typeWriter1" OnComplete="UpdateComponent" />
 	<br />
 	@if (typeWriter1 != null && typeWriter1.isFinish == true)
 	{
-		<TextLetterByLetter Text="-----------------------------------" Style="color: #0000FF" Speed="0" @ref="typeWriter2" OnComplete="UpdateComponent" />
+		<TextLetterByLetter Text="-----------------------------------" Style="color: var(--welcome-blue);" Speed="0" @ref="typeWriter2" OnComplete="UpdateComponent" />
 		<br />
 	}
 	@if (typeWriter2 != null && typeWriter2.isFinish == true)
@@ -17,14 +17,14 @@
 	}
 	@if (typeWriter3 != null && typeWriter3.isFinish == true)
 	{
-		<TextLetterByLetter Text="//////////////////" Style="color: #00FF00" Speed="100" />
+		<TextLetterByLetter Text="//////////////////" Style="color: var(--welcome-green);" Speed="100" />
 		<br />
 		<p>Soy</p>
-		<h1 style="color:#FFFF00;">35P10</h1>
+		<h1 style="color:var(--welcome-yellow);">35P10</h1>
 		<p>Desarrollador FullStack</p>
 		<p>y de Videojuegos</p>
 		<br />
-		<TextLetterByLetter Text="//////////////////" Style="color: #FF0000" Speed="100" OnComplete="UpdateComponentFinish" />
+		<TextLetterByLetter Text="//////////////////" Style="color: var(--welcome-red);" Speed="100" OnComplete="UpdateComponentFinish" />
 		<br />
 	}
 </PromptWindow>

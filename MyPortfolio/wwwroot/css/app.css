@@ -28,6 +28,15 @@
     --welcome-green: #00FF00;
 
     --window-console: black;
+    --window-console-font: #FFF;
+    
+    --skill-text-background: #BDBEBD;
+
+    --explorer-text-background: #FFF;
+
+    --contactme-backgroundglobe: #FFFF00;
+    --contactme-font: black;
+    --contactme-fontCustomMsg: black;
 }
 
 .dark-mode {
@@ -45,20 +54,29 @@
     --shadow-2: #88C070;
     --shadow-3: #88C070;
     --shadow-4: #88C070;
-    --shadow-5: #E0F8D0;
+    --shadow-5: #88C070;
 
-    --hr-shadow-1:#88C070;
-    --hr-shadow-2:#E0F8D0;
+    --hr-shadow-1:#346856;
+    --hr-shadow-2:#88C070;
 
-    --sidebar: #88C070;
+    --sidebar: #0d2818;
     --sidebar-icon: #E0F8D0;
 
-    --welcome-red: #0d2818;
-    --welcome-blue: #0d2818;
-    --welcome-yellow: #0d2818;
-    --welcome-green: #0d2818;
+    --welcome-red: #E0F8D0;
+    --welcome-blue: #88C070;
+    --welcome-yellow: #E0F8D0;
+    --welcome-green: #E0F8D0;
 
-    --window-console: #E0F8D0;
+    --window-console: #0d2818;
+    --window-console-font: #88C070;
+
+    --skill-text-background: #0d2818;
+
+    --explorer-text-background: #0d2818;
+
+    --contactme-backgroundglobe: #0d2818;
+    --contactme-font: #88C070;
+    --contactme-fontCustomMsg: #E0F8D0;
 }
 
 html, body {

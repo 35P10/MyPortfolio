@@ -38,7 +38,7 @@ background-size:cover;
         overflow-y: auto;
         margin: 0;
         flex: 1;
-        background-color: var(--background-3);
+        background-color: var(--explorer-text-background);
     }
 }
 

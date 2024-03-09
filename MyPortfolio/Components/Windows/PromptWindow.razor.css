@@ -1,5 +1,5 @@
 ﻿.window-content-section {
-	color: var(--font-color-negative);
+	color: var(--window-console-font);
 	padding: 4px;
 	background-color: var(--window-console);
 	font-size: 12px;

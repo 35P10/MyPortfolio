@@ -3,7 +3,7 @@
 
 <PromptWindow Title="Command Prompt" Height=@getStyle()>
 	<span style="color: var(--welcome-red);">mensaje de bienvenida:</span>
-	<TextLetterByLetter Text="¡Gracias por tomarte el tiempo de conocerme! Estoy emocionado por compartir mi trabajo contigo y espero que disfrutes explorando mi portafolio tanto como yo disfruté creándolo. Si tienes alguna pregunta o estás interesado en colaborar en futuros proyectos, no dudes en ponerte en contacto conmigo. ¡Vamos a crear algo increíble juntos!" Speed="1" @ref="typeWriter1" OnComplete="UpdateComponent" />
+	<TextLetterByLetter Text="¡Gracias por tomarte el tiempo de conocerme! Estoy emocionado por compartir mi trabajo contigo y espero que disfrutes explorando mi portafolio tanto como yo disfruté creándolo. Si tienes alguna pregunta o estás interesado en colaborar en futuros proyectos, no dudes en ponerte en contacto conmigo. ¡Vamos a crear algo increíble juntos!" Speed="1" @ref="typeWriter1" OnComplete="UpdateComponent" Style="color: var(--window-console-font);" />
 	<br />
 	@if (typeWriter1 != null && typeWriter1.isFinish == true)
 	{
@@ -12,7 +12,7 @@
 	}
 	@if (typeWriter2 != null && typeWriter2.isFinish == true)
 	{
-		<TextLetterByLetter Text="C:\Windows\User\35P10 > cat welcome.txt" Speed="40" @ref="typeWriter3" OnComplete="UpdateComponent" />
+		<TextLetterByLetter Text="C:\Windows\User\35P10 > cat welcome.txt" Speed="40" @ref="typeWriter3" OnComplete="UpdateComponent" Style="color: var(--window-console-font);" />
 		<br />
 	}
 	@if (typeWriter3 != null && typeWriter3.isFinish == true)

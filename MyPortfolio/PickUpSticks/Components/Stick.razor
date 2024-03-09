@@ -20,7 +20,7 @@
 	[Parameter]
 	public String Color { get; set; } = "#FFF";
 	[Parameter]
-	public Action HandleOverlapping { get; set; }
+	public EventCallback HandleOverlapping { get; set; }
 
 	public int _Length { get; set; }
 	public int _Width { get; set; }
@@ -32,18 +32,7 @@
 
 	protected override void OnInitialized()
 	{
-		_Width = Width;
-		_Length = Length;
-		if (Orientation == false)
-		{
-			int temp = _Length;
-			_Length = Width;
-			_Width = temp;
-		};
-		Bottom = StartY;
-		Top = Bottom + _Length;
-		Left = StartX;
-		Right = Left + _Width;
+		updatePosition();
 	}
 
 	public bool IsOverlapping(Stick other)
@@ -59,8 +48,24 @@
 		return x.ToString() + "px";
 	}
 
-	private void InvokeOnClick()
+	public void updatePosition()
 	{
-		HandleOverlapping?.Invoke();
+		_Width = Width;
+		_Length = Length;
+		if (Orientation == false)
+		{
+			int temp = _Length;
+			_Length = Width;
+			_Width = temp;
+		};
+		Bottom = StartY;
+		Top = Bottom + _Length;
+		Left = StartX;
+		Right = Left + _Width;
+	}
+
+	private async Task InvokeOnClick()
+	{
+		await HandleOverlapping.InvokeAsync();
 	}
 }

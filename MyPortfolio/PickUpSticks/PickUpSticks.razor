@@ -101,7 +101,7 @@
 		};
 	}
 
-	public bool checkOverlapping(int one)
+	private async Task checkOverlapping(int one)
 	{
 		for (int i = ComponentRefs[one].ZIndex + 1; i < NumberOfSticks; i++)
 		{
@@ -109,15 +109,36 @@
 			{
 				gameStatus = 2;
 				StateHasChanged();
-				return true;
+				return;
 			}
 		}
-		ComponentRefs[one].enable = false;
 		if (--ActiveSticks == 0) {
 			gameStatus = 1;
 			StateHasChanged();
 		}
-		return false;
+		ComponentRefs[one].enable = false;
+		//await Task.Delay(10);
+		//generateRandomStick(one);
+		return;
+	}
+
+	private void generateRandomStick(int one)
+	{
+		bool temp = GetRandomBool();
+		ComponentRefs[one].Orientation = temp;
+		ComponentRefs[one].Color = GetRandomColor();
+
+		if (temp == true)
+		{
+			SticksSize[one] = Tuple.Create(@random.Next(0, Width - StickSize), random.Next(0, Height - StickHeight));
+		}
+		else
+		{
+			SticksSize[one] = Tuple.Create(@random.Next(0, Width - StickHeight), random.Next(0, Height - StickSize));
+		}
+		ComponentRefs[one].updatePosition();
+		ComponentRefs[one].enable = true;
+		ActiveSticks++;
 	}
 
 	private async Task ObtenerDimensionesElemento()

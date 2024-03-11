@@ -24,7 +24,7 @@
     .group-section, .tab-section {
         overflow-y:auto;
         height: 100px;
-        background-color: var(--background-3);
+        background-color: var(--explorer-text-background);
         flex: 1;
         .explorer-option {
             display: block;

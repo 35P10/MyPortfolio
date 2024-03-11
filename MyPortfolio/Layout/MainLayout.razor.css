@@ -23,9 +23,21 @@ main {
 
 .sidebar {
     background: var(--sidebar);
+    display: flex;
+    flex-direction: row;
     top: 0;
     position: sticky;
     z-index: 20;
+}
+
+.common-actions {
+    margin-left: auto;
+    width: max-content;
+    height: 86px;
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+    padding: 8px;
 }
 
 .top-row {
@@ -68,9 +80,16 @@ main {
     }
 
     .sidebar {
+        flex-direction: column;
         height: 100vh;
         top: 0;
     }
+
+    .common-actions {
+        margin-left: 0;
+        margin-top: auto;
+    }
+
 
     .top-row {
         position: sticky;

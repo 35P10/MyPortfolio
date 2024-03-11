@@ -1,4 +1,8 @@
-﻿.tech-window-header {
+﻿.tech-window {
+    background-color: var(--skill-text-background);
+}
+
+.tech-window-header {
     background-color: var(--shadow-3);
     color: var(--font-color-negative-2);
     padding: 8px 4px;
@@ -30,6 +34,5 @@
     .tech-list {
         display: block;
         flex: 1;
-        background-color: #BDBEBD;
     }
 }

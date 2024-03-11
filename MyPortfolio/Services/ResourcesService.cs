@@ -24,7 +24,9 @@
 			techIcons["Redis"] = "icons/redis.svg";
 			techIcons["Kafka"] = "icons/kafka.svg";
 			techIcons["discord"] = "icons/icons8-discord.svg";
-		}
+            techIcons["sun"] = "icons/sun.png";
+            techIcons["moon"] = "icons/moon.png";
+        }
 
 		public String getIconSrc(String name)
 		{

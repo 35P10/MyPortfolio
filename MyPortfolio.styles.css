@@ -85,7 +85,7 @@
     .group-section, .tab-section {
         overflow-y:auto;
         height: 100px;
-        background-color: var(--background-3);
+        background-color: var(--explorer-text-background);
         flex: 1;
         .explorer-option {
             display: block;
@@ -118,7 +118,7 @@
 }
 /* /Components/Windows/PromptWindow.razor.rz.scp.css */
 .window-content-section[b-2v43c7tvrl] {
-	color: var(--font-color-negative);
+	color: var(--window-console-font);
 	padding: 4px;
 	background-color: var(--window-console);
 	font-size: 12px;
@@ -197,7 +197,7 @@ background-size:cover;
         overflow-y: auto;
         margin: 0;
         flex: 1;
-        background-color: var(--background-3);
+        background-color: var(--explorer-text-background);
     }
 }
 
@@ -234,6 +234,7 @@ background-size:cover;
     padding: 6px;
     width: 32px;
     height: 32px;
+    background-color: var(--explorer-content-techicons-background);
     img {
         width: 100%;
         height: 100%;
@@ -350,9 +351,21 @@ main[b-v5e7apnfn7] {
 
 .sidebar[b-v5e7apnfn7] {
     background: var(--sidebar);
+    display: flex;
+    flex-direction: row;
     top: 0;
     position: sticky;
     z-index: 20;
+}
+
+.common-actions[b-v5e7apnfn7] {
+    margin-left: auto;
+    width: max-content;
+    height: 86px;
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+    padding: 8px;
 }
 
 .top-row[b-v5e7apnfn7] {
@@ -395,9 +408,16 @@ main[b-v5e7apnfn7] {
     }
 
     .sidebar[b-v5e7apnfn7] {
+        flex-direction: column;
         height: 100vh;
         top: 0;
     }
+
+    .common-actions[b-v5e7apnfn7] {
+        margin-left: 0;
+        margin-top: auto;
+    }
+
 
     .top-row[b-v5e7apnfn7] {
         position: sticky;
@@ -425,7 +445,7 @@ main[b-v5e7apnfn7] {
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .navbar[b-spr4vqi75e] {
-    width: 100%;
+    width: max-content;
     height: 86px;
     display: flex;
     justify-content: left;
@@ -496,10 +516,10 @@ main[b-v5e7apnfn7] {
     width: 0;
     height: 0;
     border-left: 0 0 solid transparent;
-    border-right: 74px solid #FF0;
+    border-right: 74px solid var(--contactme-backgroundglobe);
     border-top: 32px solid transparent;
     position: relative;
-    box-shadow: 2.2px 2.2px 0px 0px #7B7D7B, 3px 3px 0px 0px #000;
+    box-shadow: 2.2px 2.2px 0px 0px var(--shadow-2), 3px 3px 0px 0px var(--shadow-1);
     transform-origin: 0 0;
     transform: rotate(23deg);
 }
@@ -508,11 +528,12 @@ main[b-v5e7apnfn7] {
     display: block;
     height: 5rem;
     width: 100%;
-    background-color: #FFFF00;
+    background-color: var(--contactme-backgroundglobe);
     padding: 8px;
     border-radius: 4px;
-    border: 1px solid #000;
-    box-shadow: 0px 0px 0px 2px #7B7D7B inset;
+    border: 1px solid var(--shadow-1);
+    box-shadow: 0px 0px 0px 2px var(--shadow-2) inset;
+    color: var(--contactme-font);
 }
 
 .helper[b-cbarxuofts] {
@@ -574,6 +595,10 @@ main[b-v5e7apnfn7] {
     }
 }
 /* /Pages/TechSkills.razor.rz.scp.css */
+.tech-window[b-y6izakqg01] {
+    background-color: var(--skill-text-background);
+}
+
 .tech-window-header[b-y6izakqg01] {
     background-color: var(--shadow-3);
     color: var(--font-color-negative-2);
@@ -606,6 +631,5 @@ main[b-v5e7apnfn7] {
     .tech-list[b-y6izakqg01] {
         display: block;
         flex: 1;
-        background-color: #BDBEBD;
     }
 }

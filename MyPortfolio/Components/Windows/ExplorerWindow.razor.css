@@ -26,8 +26,11 @@
         height: 100px;
         background-color: var(--explorer-text-background);
         flex: 1;
-        .explorer-option {
+        .explorer-option
+        {
+            font-size: var( --fontsize-normal);
             display: block;
+            padding: 1px 8px;
         }
     }
 }

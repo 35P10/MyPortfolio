@@ -9,7 +9,7 @@
             padding-left: 8px;
             padding-right: 8px;
             border-radius: 4px 4px 0 0;
-            box-shadow: -1px 0px 0px 0px #000 inset, 1px 1px 0px 0px #FFF inset, -2px 0px 0px 0px #7B7D7B inset, 2px 2px 0px 0px #DEDFDE inset;
+            box-shadow: -1px 0px 0px 0px var(--shadow-1) inset, 1px 1px 0px 0px var(--shadow-5) inset, -2px 0px 0px 0px var(--shadow-2) inset, 2px 2px 0px 0px var(--shadow-4) inset;
         }
     }
 
@@ -18,7 +18,7 @@
         position: relative;
         top: -2px;
         display: block;
-        box-shadow: 0px -1px 0px 0px #000 inset, -1px 0px 0px 0px #000 inset, 1px 1px 0px 0px #FFF inset, 0px -2px 0px 0px #7B7D7B inset, -2px 0px 0px 0px #7B7D7B inset, 2px 2px 0px 0px #DEDFDE inset, 0px 0px 0px 3px #BDBEBD inset;
+        box-shadow: 0px -1px 0px 0px var(--shadow-1) inset, -1px 0px 0px 0px var(--shadow-1) inset, 1px 1px 0px 0px var(--shadow-5) inset, 0px -2px 0px 0px var(--shadow-2) inset, -2px 0px 0px 0px var(--shadow-2) inset, 2px 2px 0px 0px var(--shadow-4) inset, 0px 0px 0px 3px var(--background-2) inset;
     }
 }
 

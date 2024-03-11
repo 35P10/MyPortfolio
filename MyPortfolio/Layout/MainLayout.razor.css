@@ -6,7 +6,7 @@
 
 .page {
     min-height: 100vh;
-    background: #007B7C;
+    background: var(--background);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@ main {
 }
 
 .sidebar {
-    background: #B8B8B8;
+    background: var(--sidebar);
     top: 0;
     position: sticky;
     z-index: 20;

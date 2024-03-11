@@ -1,4 +1,9 @@
 :root {
+    /*font sizes*/
+    --fontsize-small: 12px;
+    --fontsize-normal: 14px;
+    --fontsize-heading: 24px;
+    --fontsize-subheading: 21px;
     /*light theme*/
     --background: #007B7C;
     --background-2: #BDBEBD;
@@ -26,7 +31,6 @@
     --skill-text-background: #BDBEBD;
     --explorer-text-background: #FFF;
     --explorer-content-techicons-background: transparent;
-
     --contactme-backgroundglobe: #FFFF00;
     --contactme-font: black;
     --contactme-fontCustomMsg: black;
@@ -65,10 +69,10 @@
 }
 
 html, body {
-    font-family: Consolas;
     font-weight: 500;
     font-style: normal;
-    font-size: 12px;
+    font-family: "Sometype Mono", monospace;
+    font-size: var(--fontsize-normal);
     line-height: normal;
     color: var(--font-color);
 }
@@ -79,6 +83,10 @@ html, body {
     margin: 0;
 }
 
+h1 {
+    font-size: var(--fontsize-heading);
+}
+
 button, input[type="submit"], input[type="reset"] {
     background: none;
     color: inherit;
@@ -87,10 +95,6 @@ button, input[type="submit"], input[type="reset"] {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-}
-
-h1:focus {
-    outline: none;
 }
 
 a, .btn-link {
@@ -260,7 +264,8 @@ code {
     flex-direction: row;
     align-items: center;
     background-color: var(--window-header);
-    font-size: 12px;
+    font-size: var(--fontsize-small);
+    padding: 2px 4px;
     color: var(--font-color-negative);
     h3
     {

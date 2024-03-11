@@ -87,8 +87,11 @@
         height: 100px;
         background-color: var(--explorer-text-background);
         flex: 1;
-        .explorer-option {
+        .explorer-option
+        {
+            font-size: var( --fontsize-normal);
             display: block;
+            padding: 1px 8px;
         }
     }
 }
@@ -256,13 +259,15 @@ background-size:cover;
 	display: flex;
 	align-items: center;
 	padding: 0 8px;
+	margin: 2px 0;
 	background-color: var(--background-2);
 	width: 100%;
 	height: 24px;
-	font-size: 12px;
+	font-size: var(--fontsize-normal);
 	gap: 8px;
 	img {
-			height: 80%;
+		height: 75%;
+		width: 16px;
 	    }
 	p[b-to53up7jb8] {
 		margin: 0;
@@ -277,10 +282,10 @@ background-size:cover;
         width: 100%;
         height: 100%;
     }
-    
-    .window-header[b-79oobwopyq]
-    {
+
+    .window-header[b-79oobwopyq] {
         padding: 2px 4px;
+        font-size: var(--fontsize-small);
     }
 
     .window-header span[b-79oobwopyq] {

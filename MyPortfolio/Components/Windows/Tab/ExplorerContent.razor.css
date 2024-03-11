@@ -75,6 +75,7 @@ background-size:cover;
     padding: 6px;
     width: 32px;
     height: 32px;
+    background-color: var(--explorer-content-techicons-background);
     img {
         width: 100%;
         height: 100%;

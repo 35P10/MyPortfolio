@@ -1,10 +1,51 @@
 ﻿@inherits LayoutComponentBase
-<div class="page dark-mode">
-    <div class="sidebar box-shadow">
+@using MyPortfolio.Components.Buttons;
+@inject IJSRuntime JSRuntime;
+@using MyPortfolio.Services;
+@inject ResourcesService SRCRepo;
+
+<div class="page @getCurrentTheme()">
+    <nav class="sidebar box-shadow">
         <NavMenu />
-    </div>
+        <div class="common-actions">
+            <IconCardComponent ImageUrl="@SRCRepo.getIconSrc(getThemeIcon())" Title="Theme" OnClick="ChangingTheme" />
+        </div>
+    </nav>
 
     <main>
        @Body
     </main>
 </div>
+
+@code {
+    private bool CurrentTheme = true;
+    private readonly string keyTheme = "theme";
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        var themeFromLocalStorage = await JSRuntime.InvokeAsync<string>("readLocalStorage", keyTheme);
+        if (!string.IsNullOrEmpty(themeFromLocalStorage))
+        {
+
+            CurrentTheme = bool.Parse(themeFromLocalStorage);
+        }
+    }
+
+    private string getCurrentTheme()
+    {
+        return CurrentTheme == true ? String.Empty : "dark-mode";
+    }
+
+    private string getThemeIcon()
+    {
+        return CurrentTheme == true ? "sun" : "moon";
+    }
+
+    public async Task ChangingTheme()
+    {
+        CurrentTheme = !CurrentTheme;
+        StateHasChanged();
+        await JSRuntime.InvokeVoidAsync("addToLocalStorage", keyTheme, CurrentTheme);
+    }
+}

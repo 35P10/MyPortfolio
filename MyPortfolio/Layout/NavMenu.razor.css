@@ -1,5 +1,5 @@
 .navbar {
-    width: 100%;
+    width: max-content;
     height: 86px;
     display: flex;
     justify-content: left;

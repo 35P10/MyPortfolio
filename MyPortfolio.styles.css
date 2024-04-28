@@ -213,6 +213,7 @@ p[b-lhrqbvxgoz] {
     flex: 1;
     flex-basis: 0;
     background-color: var(--explorer-text-background);
+    scrollbar-color: var(--shadow-3) var(--background-2);
 }
 }
 
@@ -656,15 +657,16 @@ main[b-v5e7apnfn7] {
     overflow-x: auto;
     overflow-y: hidden;
     gap: 8px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     scroll-snap-type: x mandatory;
+    scrollbar-color: var(--accent-color) var(--background-2);
 }
 
 .content-item[b-nep7yisjc7] {
     scroll-snap-align: center;
     display: block;
     height: 100%;
-    min-width: 400px;
+    min-width: 100%;
     padding: 8px;
     width: 300px;
 }
@@ -698,11 +700,12 @@ main[b-v5e7apnfn7] {
 
         }
 
-        .content-item[b-nep7yisjc7] {
-            height: 300px;
-            flex: 1;
-            width: auto;
-        }
+.content-item[b-nep7yisjc7] {
+    height: 300px;
+    flex: 1;
+    width: auto;
+    min-width: auto;
+}
 }
 /* /Pages/TechSkills.razor.rz.scp.css */
 .tech-window[b-y6izakqg01] {

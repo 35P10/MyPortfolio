@@ -522,6 +522,7 @@ main[b-v5e7apnfn7] {
 
 .imgs[b-u4xzcetujf] {
 	display: block;
+	position: relative;
 	height: 30%;
 
 	img {

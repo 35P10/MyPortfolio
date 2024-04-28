@@ -178,11 +178,21 @@
 }
 
 .img[b-lhrqbvxgoz] {
-display:block;
-width: 100%;
-height: 60%;
-background-position:center;
-background-size:cover;
+    display: block;
+    width: 100%;
+    height: 60%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--shadow-3);
+}
+
+.img-large[b-lhrqbvxgoz] {
+   ;
+}
+
+.img-high[b-lhrqbvxgoz] {
+    display: none;
 }
 
 .text[b-lhrqbvxgoz] {
@@ -195,14 +205,15 @@ background-size:cover;
         margin: 0;
     }
 
-    p[b-lhrqbvxgoz] {
-        display: block;
-        padding: 8px;
-        overflow-y: auto;
-        margin: 0;
-        flex: 1;
-        background-color: var(--explorer-text-background);
-    }
+p[b-lhrqbvxgoz] {
+    display: block;
+    padding: 8px;
+    overflow-y: auto;
+    margin: 0;
+    flex: 1;
+    flex-basis: 0;
+    background-color: var(--explorer-text-background);
+}
 }
 
 .links[b-lhrqbvxgoz] {
@@ -253,6 +264,14 @@ background-size:cover;
     .img[b-lhrqbvxgoz] {
         width: 40%;
         height: 100%;
+    }
+
+    .img-large[b-lhrqbvxgoz] {
+        display: none;
+    }
+
+    .img-high[b-lhrqbvxgoz] {
+        display: block;
     }
 }
 /* /Components/Windows/Tab/MenuItem.razor.rz.scp.css */
@@ -633,7 +652,7 @@ main[b-v5e7apnfn7] {
     width: inherit;
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     gap: 8px;
     padding-bottom: 4px;
@@ -651,40 +670,38 @@ main[b-v5e7apnfn7] {
 
 @media (min-width: 1024px) {
     .mainProjects[b-nep7yisjc7] {
-        flex-direction: row;
+        gap: 32px;
+        height: auto;
     }
 
     .mainProjects-content[b-nep7yisjc7] {
         gap: 16px;
+        justify-content:left;
+        flex-wrap: wrap;
+        overflow-x: unset;
+        overflow-y: unset;
+        height: contain;
     }
 
 
 
     .title[b-nep7yisjc7] {
-        width: 20%;
-        h2 {
-            font-size: 28px;
+        h2
+        {
+            font-size: 400%;
         }
 
         p[b-nep7yisjc7] {
             font-size: 24px;
         }
-    }
 
-    .content-item[b-nep7yisjc7] {
-        min-width: 600px;
-    }
-}
+        }
 
-@media (min-width: 1440px) {
-    .title[b-nep7yisjc7] {
-        h2 {
-            font-size: 60px;
+        .content-item[b-nep7yisjc7] {
+            height: 300px;
+            flex: 1;
+            width: auto;
         }
-        p[b-nep7yisjc7] {
-            font-size: 32px;
-        }
-    }
 }
 /* /Pages/TechSkills.razor.rz.scp.css */
 .tech-window[b-y6izakqg01] {

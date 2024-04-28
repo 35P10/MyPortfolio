@@ -28,15 +28,16 @@
     overflow-x: auto;
     overflow-y: hidden;
     gap: 8px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     scroll-snap-type: x mandatory;
+    scrollbar-color: var(--accent-color) var(--background-2);
 }
 
 .content-item {
     scroll-snap-align: center;
     display: block;
     height: 100%;
-    min-width: 400px;
+    min-width: 100%;
     padding: 8px;
     width: 300px;
 }
@@ -70,9 +71,10 @@
 
         }
 
-        .content-item {
-            height: 300px;
-            flex: 1;
-            width: auto;
-        }
+.content-item {
+    height: 300px;
+    flex: 1;
+    width: auto;
+    min-width: auto;
+}
 }

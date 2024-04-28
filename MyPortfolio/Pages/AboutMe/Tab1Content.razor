@@ -1,11 +1,31 @@
 ﻿<div class="aboutme-content">
 	<div class="imgs" >
-		<img src="https://avatars.githubusercontent.com/u/52789278?v=4" />
+        <img @onmouseover="ShowTooltip" @onmouseleave="HideTooltip" src="https://avatars.githubusercontent.com/u/52789278?v=4" />
+        @if (showTooltip)
+        {
+            <div class="tooltip">
+                No soy yo, pero te presento a Zoot, mi muppet favorito
+            </div>
+        }
 	</div>
 	<hr />
 	<p>
-		Soy 35P10, -aspirante a- desarrollador de 23 años con interés en computación gráfica y  algoritmos. Cuando no estoy inmerso en líneas de código, me encontrarás escuchando Heavy Metal.
+		Soy 35P10, desarrollador de 23 años con interés en computación gráfica, IA y algoritmos. Cuando no estoy inmerso en líneas de código, me encontrarás escuchando Heavy Metal.
 		<br /><br />
-		El primer juego que recuerdo haber jugado fué Prince of Persia de 1989 en un computador con Windows 3.1. Desde ese momento, supe que queria dedicarme al desarrollo de videojuegos. Sin embargo, mi curiosidad y habilidades también abarcan el desarrollo web y desktop. Cada proyecto es una oportunidad para desafiarme a mí mismo y aprender algo nuevo.
+		Aunque mi experiencia laboral no es extensa, he estado inmerso en proyectos grupales y he liderado iniciativas personales que me han preparado para los desafíos venideros. Desde trabajar como desarrollador back-end hasta desarrollador de videojuegos, he forjado mi camino combinando tanto aprendizaje profesional como autodidacta.
 	</p>
 </div>
+
+@code {
+    private bool showTooltip = false;
+
+    private void ShowTooltip()
+    {
+        showTooltip = true;
+    }
+
+    private void HideTooltip()
+    {
+        showTooltip = false;
+    }
+}

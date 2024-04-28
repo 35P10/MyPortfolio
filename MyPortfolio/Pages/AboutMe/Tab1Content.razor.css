@@ -13,6 +13,7 @@
 
 .imgs {
 	display: block;
+	position: relative;
 	height: 30%;
 
 	img {

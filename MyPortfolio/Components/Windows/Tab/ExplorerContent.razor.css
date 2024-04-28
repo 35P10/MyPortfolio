@@ -5,6 +5,7 @@
     gap: 8px;
     padding: 0;
     flex-direction: column;
+    color: var(--font-color);
 }
 
 .content-content {

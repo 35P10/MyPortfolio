@@ -2,6 +2,8 @@
 @inject IJSRuntime JSRuntime;
 
 <div class="navbar">
+	<IconCardComponent ImageUrl="https://win98icons.alexmeub.com/icons/png/game_freecell-1.png" Title="Main Projects" OnClick=" ()=>
+		scrollToSection(sectionMyMainProjects)" />
 	<IconCardComponent ImageUrl="https://win98icons.alexmeub.com/icons/png/msg_information-0.png" Title="About" OnClick=" ()=>
 		scrollToSection(sectionAboutMe)" />
 	<IconCardComponent ImageUrl="https://win98icons.alexmeub.com/icons/png/defragment-0.png" Title="Project Explorer" OnClick=" ()=>
@@ -12,6 +14,7 @@
 
 @code {
 	private string sectionAboutMe { get; set; } = "aboutme";
+	private string sectionMyMainProjects { get; set; } = "mymainprojects";
 	private string sectionMyProjects { get; set; } = "myprojects";
 	private string sectionContactMe { get; set; } = "contactme";
 

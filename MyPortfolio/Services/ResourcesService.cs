@@ -23,6 +23,7 @@
 			techIcons["AWS"] = "icons/amazon-web-services-2.svg";
 			techIcons["Redis"] = "icons/redis.svg";
 			techIcons["Kafka"] = "icons/kafka.svg";
+			techIcons["Azure"] = "icons/azure-2.svg";
 			techIcons["discord"] = "icons/icons8-discord.svg";
             techIcons["sun"] = "icons/sun.png";
             techIcons["moon"] = "icons/moon.png";

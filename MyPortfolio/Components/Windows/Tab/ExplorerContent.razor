@@ -2,7 +2,8 @@
 
 <div class="content">
 	<div class="content-content">
-		<div class="box-shadow-3 img" style="background-image:url('@SourceImg')"></div>
+		<div class="box-shadow-3 img img-large" style="background-image:url('@SourceImgLarge')"></div>
+		<div class="box-shadow-3 img img-high" style="background-image:url('@SourceImgHigh')"></div>
 		<div class="text">
 			<h4>@ProjectTitle</h4>
 			<p class="box-shadow-sub">@Description</p>
@@ -43,7 +44,10 @@
 	public String SourceCode { get; set; } = "";
 
 	[Parameter]
-	public String SourceImg { get; set; }
+	public String SourceImgLarge { get; set; }
+
+	[Parameter]
+	public String SourceImgHigh { get; set; }
 
 	[Parameter]
 	public List<String> Techs { get; set; } = new List<string>();

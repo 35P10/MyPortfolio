@@ -1,28 +1,10 @@
 ﻿@using MyPortfolio.Services
 @inject ResourcesService SRCRepo
 
-<img class="icon" @onmouseover="ShowTooltip" @onmouseleave="HideTooltip" src=@SRCRepo.getIconSrc(Technology) alt=@Technology>
+<img class="icon" src=@SRCRepo.getIconSrc(Technology) alt=@Technology>
 
-@if (showTooltip)
-{
-    <div class="tooltip">
-        @Technology
-    </div>
-}
 
 @code {
 	[Parameter]
 	public string Technology { get; set; }
-
-    private bool showTooltip = false;
-
-    private void ShowTooltip()
-    {
-        showTooltip = true;
-    }
-
-    private void HideTooltip()
-    {
-        showTooltip = false;
-    }
 }

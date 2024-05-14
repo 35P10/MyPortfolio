@@ -1,0 +1,31 @@
+﻿<div class="ToolTipButton-container" @onmouseover="ShowTooltip" @onmouseleave="HideTooltip">
+	@ChildContent
+    @if (showTooltip)
+    {
+        <div class="tooltip">
+            @ToolTipMsg
+        </div>
+    }
+</div>
+
+
+@code {
+
+	[Parameter]
+	public RenderFragment ChildContent { get; set; }
+
+	[Parameter]
+	public string ToolTipMsg { get; set; }
+
+    private bool showTooltip = false;
+
+    private void ShowTooltip()
+    {
+        showTooltip = true;
+    }
+
+    private void HideTooltip()
+    {
+        showTooltip = false;
+    }
+}

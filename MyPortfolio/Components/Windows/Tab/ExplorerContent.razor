@@ -12,9 +12,19 @@
 	<div class="links">
 		@if (SourceCode != "")
 		{
-			<a class="box-shadow tech-icon" href="@SourceCode">
-				<img src="https://pngimg.com/uploads/github/github_PNG27.png" loading="lazy" alt="source link: github icon">
+			<ToolTipButton ToolTipMsg="Repositorio">
+				<a class="box-shadow tech-icon" href="@SourceCode">
+					<img src="https://pngimg.com/uploads/github/github_PNG27.png" loading="lazy" alt="source link: github icon">
+				</a>
+			</ToolTipButton>
+		}
+		@if (PublishLink != "")
+		{
+			<ToolTipButton ToolTipMsg="Publicación">
+			<a class="box-shadow tech-icon" href="@PublishLink">
+				<img src="icons/external-link.svg" loading="lazy" alt="link to online publish">
 			</a>
+			</ToolTipButton>
 		}
 		@if (Techs.Count != 0)
 		{
@@ -23,9 +33,11 @@
 			<p>Tecnologías:</p>
 			@foreach(String tech in Techs)
 			{
+					<ToolTipButton ToolTipMsg=@tech>
 				<div class="box-shadow-sub-2 tech-icon">
 					<TechIcon Technology=@tech />
 				</div>
+				</ToolTipButton>
 			}
 			</div>
 		}
@@ -42,6 +54,9 @@
 
 	[Parameter]
 	public String SourceCode { get; set; } = "";
+
+	[Parameter]
+	public String PublishLink { get; set; } = "";
 
 	[Parameter]
 	public String SourceImgLarge { get; set; }

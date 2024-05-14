@@ -58,6 +58,12 @@
     }
 }
 /* /Components/Buttons/TechIcon.razor.rz.scp.css */
+/* /Components/Buttons/ToolTipButton.razor.rz.scp.css */
+.ToolTipButton-container[b-wset86bxa3] {
+    display: block;
+    width: contain;
+    position: relative;
+}
 /* /Components/Windows/ExplorerWindow.razor.rz.scp.css */
 .window[b-rihg3f5cz2] {
     width: 100%;
@@ -704,7 +710,7 @@ main[b-v5e7apnfn7] {
     height: 300px;
     flex: 1;
     width: auto;
-    min-width: auto;
+    min-width: 400px;
 }
 }
 /* /Pages/TechSkills.razor.rz.scp.css */

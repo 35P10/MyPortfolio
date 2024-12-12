@@ -15,6 +15,8 @@
 	flex-direction: column;
 }
 
+/*
+		para que sea un bloque oscuro, sin estilo de ventana
 @media (min-width: 1024px) {
 	.window-header {
 		display: none;
@@ -35,5 +37,23 @@
 @media (min-width: 1440px) {
 	.window {
 		padding: 64px 256px;
+	}
+}
+*/
+
+@media (min-width: 1024px) {
+	.window {
+		margin: 24px 64px 0 64px;
+		background-color: var(--window-console);
+	}
+
+	.window-content-section {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.window {
+		margin: 24px 256px 0 256px;
 	}
 }

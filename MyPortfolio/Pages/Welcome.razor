@@ -2,29 +2,27 @@
 @using MyPortfolio.Components.Windows;
 
 <PromptWindow Title="Command Prompt" Height=@getStyle()>
-	<span style="color: var(--welcome-red); ">mensaje de bienvenida:</span>
-	<TextLetterByLetter Text="¡Gracias por tomarte el tiempo de conocerme! Estoy emocionado por compartir mi trabajo contigo y espero que disfrutes explorando mi portafolio tanto como yo disfruté creándolo. Si tienes alguna pregunta o estás interesado en colaborar en futuros proyectos, no dudes en ponerte en contacto conmigo. ¡Vamos a crear algo increíble juntos!" Speed="1" @ref="typeWriter1" OnComplete="UpdateComponent" Style="color: var(--window-console-font);" />
+	<p style="color: var(--welcome-green); ">//////////////////</p>
 	<br />
+	<p>Soy</p>
+	<h1 style="color:var(--welcome-yellow);">35P10</h1>
+	<p>Desarrollador FullStack</p>
+	<p>y de Videojuegos</p>
+	<br />
+	<p style="color: var(--welcome-green); ">//////////////////</p>
+	<br />
+
+	<span>C:\Windows\User\35P10 > </span>
+	<TextLetterByLetter Text="cat welcome.txt" Speed="80" @ref="typeWriter1" OnComplete="UpdateComponent" Style="color: var(--window-console-font);" />
+	<br />
+
 	@if (typeWriter1 != null && typeWriter1.isFinish == true)
 	{
-		<TextLetterByLetter Text="-----------------------------------" Style="color: var(--welcome-blue);" Speed="0" @ref="typeWriter2" OnComplete="UpdateComponent" />
-		<br />
+		<TextLetterByLetter Text="mensaje de bienvenida:" Style="color: var(--welcome-red);" Speed="80" @ref="typeWriter2" OnComplete="UpdateComponent" />
 	}
 	@if (typeWriter2 != null && typeWriter2.isFinish == true)
 	{
-		<TextLetterByLetter Text="C:\Windows\User\35P10 > cat welcome.txt" Speed="40" @ref="typeWriter3" OnComplete="UpdateComponent" Style="color: var(--window-console-font);" />
-		<br />
-	}
-	@if (typeWriter3 != null && typeWriter3.isFinish == true)
-	{
-		<TextLetterByLetter Text="//////////////////" Style="color: var(--welcome-green);" Speed="100" />
-		<br />
-		<p>Soy</p>
-		<h1 style="color:var(--welcome-yellow);">35P10</h1>
-		<p>Desarrollador FullStack</p>
-		<p>y de Videojuegos</p>
-		<br />
-		<TextLetterByLetter Text="//////////////////" Style="color: var(--welcome-red);" Speed="100" OnComplete="UpdateComponentFinish" />
+		<TextLetterByLetter Text="¡Gracias por tomarte el tiempo de conocerme! Estoy emocionado por compartir mi trabajo contigo y espero que disfrutes explorando mi portafolio tanto como yo disfruté creándolo. Si tienes alguna pregunta o estás interesado en colaborar en futuros proyectos, no dudes en ponerte en contacto conmigo. ¡Vamos a crear algo increíble juntos!" Speed="80" @ref="typeWriter3" OnComplete="UpdateComponent" Style="color: var(--window-console-font);" />
 		<br />
 	}
 </PromptWindow>

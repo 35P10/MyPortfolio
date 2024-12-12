@@ -143,26 +143,46 @@
 	flex-direction: column;
 }
 
+/*
+		para que sea un bloque oscuro, sin estilo de ventana
 @media (min-width: 1024px) {
-	.window-header[b-2v43c7tvrl] {
+	.window-header {
 		display: none;
 	}
 
-	.window[b-2v43c7tvrl] {
+	.window {
 		padding: 48px 128px;
 		background-color: var(--window-console);
 		border: none;
 		box-shadow: none;
 	}
 
-	.window-content-section[b-2v43c7tvrl]{
+	.window-content-section{
 		font-size: 24px;
 	}
 }
 
 @media (min-width: 1440px) {
-	.window[b-2v43c7tvrl] {
+	.window {
 		padding: 64px 256px;
+	}
+}
+*/
+
+@media (min-width: 1024px) {
+	.window[b-2v43c7tvrl] {
+		margin: 24px 64px 0 64px;
+		background-color: var(--window-console);
+	}
+
+	.window-content-section[b-2v43c7tvrl] {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.window[b-2v43c7tvrl] {
+		margin: 24px 256px 0 256px;
 	}
 }
 /* /Components/Windows/Tab/ExplorerContent.razor.rz.scp.css */
